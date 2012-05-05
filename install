@@ -39,6 +39,7 @@ install ssh/config ~/.ssh/config
 
 # zsh
 cp -R $CURRENTDIR/zsh/themes/defv.zsh-theme ~/.oh-my-zsh/themes
+install zsh/.zsh_aliases ~/.zsh_aliases
 install zsh/.zshrc ~/.zshrc
 
 # scripts
