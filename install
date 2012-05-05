@@ -14,7 +14,10 @@ function remove_or_backup {
 	then
 		rm $1
 	else
-		mv $1 $1.old
+		if [ -f $1 ]
+		then
+			mv $1 $1.old
+		fi
 	fi
 }
 
