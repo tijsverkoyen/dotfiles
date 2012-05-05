@@ -5,6 +5,9 @@
 # @version	1.0.0
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
 
+# grab the current dir
+CURRENTDIR=$(pwd)
+
 # check if the file is a symlink, if so it will be removed, if not a backup will be created
 function remove_or_backup {
 	if [ -h $1 ] 
@@ -15,11 +18,15 @@ function remove_or_backup {
 	fi
 }
 
-# grab the current dir
-CURRENTDIR=$(pwd)
+# install the symlink if the source file exists
+function install {
+	if [ -f $1 ]
+	then
+		remove_or_backup $2
+		ln -s $CURRENTDIR/$1 $2		
+	fi
+}
 
 # git
-remove_or_backup ~/.gitignore
-ln -s $CURRENTDIR/git/.gitignore ~/.gitignore
-remove_or_backup ~/.gitconfig
-ln -s $CURRENTDIR/git/.gitconfig ~/.gitconfig
+install git/.gitignore ~/.gitignore
+install git/.gitconfig ~/.gitconfig
