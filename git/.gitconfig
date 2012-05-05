@@ -1,0 +1,17 @@
+[user]
+	name = Tijs Verkoyen
+	email = tijs@verkoyen.eu
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[core]
+	excludesfile = ~/.gitignore
+	editor = mate -w
+[branch]  
+	autosetuprebase = always

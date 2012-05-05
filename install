@@ -21,3 +21,5 @@ CURRENTDIR=$(pwd)
 # git
 remove_or_backup ~/.gitignore
 ln -s $CURRENTDIR/git/.gitignore ~/.gitignore
+remove_or_backup ~/.gitconfig
+ln -s $CURRENTDIR/git/.gitconfig ~/.gitconfig
