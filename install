@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# This script will create al needed symlinks
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+
+# check if the file is a symlink, if so it will be removed, if not a backup will be created
+function remove_or_backup {
+	if [ -h $1 ] 
+	then
+		rm $1
+	else
+		mv $1 $1.old
+	fi
+}
+
+# grab the current dir
+CURRENTDIR=$(pwd)
