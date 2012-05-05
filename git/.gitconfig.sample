@@ -1,6 +1,6 @@
 [user]
-	name = Tijs Verkoyen
-	email = tijs@verkoyen.eu
+	name = John Doe
+	email = foo@example.com
 [alias]
 	co = checkout
 	st = status
