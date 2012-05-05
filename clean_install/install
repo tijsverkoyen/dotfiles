@@ -1,10 +1,6 @@
 install_zsh
 set_osx_defaults
 
-
-
-
-
 function install_zsh {
 	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 }
