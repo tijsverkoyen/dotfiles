@@ -2,4 +2,4 @@
 alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy"
 
 # ls
-alias ls="ls -al"
+alias ls="ls -aGl"
