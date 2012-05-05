@@ -40,3 +40,7 @@ install ssh/config ~/.ssh/config
 # zsh
 cp -R $CURRENTDIR/zsh/themes/defv.zsh-theme ~/.oh-my-zsh/themes
 install zsh/.zshrc ~/.zshrc
+
+# scripts
+mkdir -p ~/bin
+install bin/new_host ~/bin/new_host

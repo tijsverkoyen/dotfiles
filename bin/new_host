@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# This script will add an entry in /etc/hosts
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+#
+# @todo	improve the script so it only adds a \n in /etc/hosts if needed
+
+# if there are no arguments we should show the usage
+if [ $# -lt 1 ]; then
+	echo Usage: new_host [host]
+	exit 1
+fi
+
+# check if we are root
+if [ "$(id -u)" != "0" ]; then
+	echo "Make sure you have root-privileges"
+	exit 1
+fi
+
+# check if servername already exists in /etc/hosts
+if grep "^127.0.0.1 $1$" /etc/hosts > /dev/null; then
+	exit 1
+else
+	echo -e "\n127.0.0.1 $1" >> /etc/hosts
+fi
