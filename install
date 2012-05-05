@@ -36,3 +36,7 @@ install mysql/.my.cnf ~/.my.cnf
 
 # ssh
 install ssh/config ~/.ssh/config
+
+# zsh
+cp -R $CURRENTDIR/zsh/themes/defv.zsh-theme ~/.oh-my-zsh/themes
+install zsh/.zshrc ~/.zshrc
