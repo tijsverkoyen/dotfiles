@@ -31,3 +31,4 @@ function install {
 install git/.gitignore ~/.gitignore
 install git/.gitconfig ~/.gitconfig
 install mysql/.my.cnf ~/.my.cnf
+install ssh/config ~/.ssh/config
