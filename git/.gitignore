@@ -1,6 +1,12 @@
 # OS X
 .DS_Store
 .idea
+.Spotlight-V100
+.Trashes
+
+# Windows
+Desktop.ini
+Thumbs.db
 
 # ZendStudio
 .project
