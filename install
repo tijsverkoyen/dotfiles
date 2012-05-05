@@ -17,3 +17,7 @@ function remove_or_backup {
 
 # grab the current dir
 CURRENTDIR=$(pwd)
+
+# git
+remove_or_backup ~/.gitignore
+ln -s $CURRENTDIR/git/.gitignore ~/.gitignore

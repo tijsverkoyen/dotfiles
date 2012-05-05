@@ -1,0 +1,15 @@
+# OS X
+.DS_Store
+.idea
+
+# ZendStudio
+.project
+.buildpath
+.settings
+
+# MySQL Workbench
+*.mwb.bak
+
+# version control
+.svn
+.svn/*
