@@ -30,3 +30,4 @@ function install {
 # git
 install git/.gitignore ~/.gitignore
 install git/.gitconfig ~/.gitconfig
+install mysql/.my.cnf ~/.my.cnf
