@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# This script will download a remote database and insert it in a local one.
+# @remark: make sure the host & user are configured in .ssh/config and my.cnf 
+# 	contains the credentials on both the remote server and the local server.
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+
+# if there are no arguments we should show the usage
+if [ $# -lt 3 ]; then
+	echo Usage: dbdump [host] [db] [local_db]
+	exit 1
+fi
+
+ssh $1 mysqldump --set-charset $2 | mysql $3

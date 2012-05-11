@@ -48,3 +48,4 @@ install zsh/.zshrc ~/.zshrc
 # scripts
 mkdir -p ~/bin
 install bin/new_host ~/bin/new_host
+install bin/dbdump ~/bin/db_dump
