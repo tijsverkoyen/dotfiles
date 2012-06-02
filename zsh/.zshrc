@@ -14,4 +14,4 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
 
 # set path
-export PATH=~/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/bin:/usr/local/mysql/bin
+export PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/X11/bin:/usr/local/bin:/usr/local/mysql/bin
