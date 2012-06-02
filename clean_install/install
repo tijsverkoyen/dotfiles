@@ -1,40 +1,17 @@
-install_zsh
-set_osx_defaults
+#!/bin/bash
+#
+# This script will setup the ideal system
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
 
-function install_zsh {
-	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-}
+# install software
+./install_zsh
+./install_homebrew
+./install_gems
 
-function install_homebrew {
-	# install brew
-	/usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+# set settings
+./set_settings_osx
 
-	# update and upgrade
-	brew update
-	brew upgrade
-	
-	# install some default packages
-	brew install cowsay
-	brew install wget
-	brew install git
-	brew install gd
-	brew install imagemagick
-}
-
-function set_osx_defaults {
-	defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false		# Disable menu bar transparency
-	defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false	# Disable opening and closing window animations
-	defaults write NSGlobalDomain NSWindowResizeTime -float 0.001 					# Increase window resize speed for Cocoa applications
-	defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false				# Disable Resume system-wide
-	defaults write com.apple.screensaver askForPassword -int 1						# Require password immediately after sleep or screen saver begins
-	defaults write com.apple.screensaver askForPasswordDelay -int 0					
-	defaults write com.apple.screencapture type -string "png"						# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-	defaults write com.apple.finder DisableAllAnimations -bool true					# Disable window animations and Get Info animations in Finder
-	defaults write NSGlobalDomain AppleShowAllExtensions -bool true					# Show all filename extensions in Finder
-	defaults write com.apple.finder ShowStatusBar -bool true						# Show status bar in Finder
-	defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true	# Avoid creating .DS_Store files on network volumes
-	defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false		# Disable the warning when changing a file extension
-	chflags nohidden ~/Library														# Show the ~/Library folder
-	defaults write com.apple.dock launchanim -bool false							# Don’t animate opening applications from the Dock
-	for app in Finder Dock Mail Safari SystemUIServer; do killall "$app" > /dev/null 2>&1; done
-}
+# done!
+cowsay Woohoo! You\'re done.

@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# This script will install some gems we like
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+
+sudo gem install capistrano-ext
+sudo gem install forkcms_3_deploy
+sudo gem install sumodev_deploy

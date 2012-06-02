@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# This script will install Homebrew
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+# install brew
+/usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+
+# update and upgrade brew
+brew doctor
+brew update
+brew upgrade
+	
+# install some packages
+brew install cowsay
+brew install wget
+brew install git
+brew install gd
+brew install imagemagick
+brew install mcrypt
