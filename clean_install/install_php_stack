@@ -1,0 +1,51 @@
+#!/bin/bash
+#
+# This script will install a PHP stack
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+
+# install MySQL
+brew install mysql
+
+# make it run as our user
+unset TMPDIR
+mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+# make it launch on startup
+mkdir -p ~/Library/LaunchAgents
+cp /usr/local/Cellar/mysql/5.5.24/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents/
+launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+
+# install PHP
+brew tap josegonzalez/homebrew-php
+brew install php --with-mysql --with-intl --with-imap
+
+# fix pear
+pear config-set auto_discover 1
+pear update-channels
+pear upgrade
+
+# install some pear packages
+pear install pear.phpunit.de/PHPUnit
+pear install PHP_Codesniffer
+
+echo "http://justinhileman.info/article/reinstalling-php-53-on-mac-os-x/"
+
+# install
+pecl install oauth
+pecl install APC
+
+# install xdebug
+brew install xdebug-php
+
+
+symlink php.ini
+symlink vhosts?
+symlink hosts?
+
+
+
+
+http://justinhileman.info/article/building-a-lamp-development-environment-on-snow-leopard/#this-part-is-optional
+
