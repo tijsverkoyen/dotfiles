@@ -49,3 +49,7 @@ install zsh/.zshrc ~/.zshrc
 mkdir -p ~/bin
 install bin/new_host ~/bin/new_host
 install bin/dbdump ~/bin/db_dump
+
+# php
+sudo mv /etc/php.ini /etc/php.ini.old
+sudo ln -s $CURRENTDIR/php/php.ini /etc/php.ini
