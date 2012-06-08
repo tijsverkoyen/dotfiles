@@ -52,3 +52,7 @@ install bin/dbdump ~/bin/db_dump
 
 # php
 install php/php.ini /usr/local/etc/php/5.3/php.ini
+
+# apache
+sudo mv /etc/apache2/httpd.conf /etc/apache2/httpd.conf.old
+sudo ln -s $CURRENTDIR/apache/httpd.conf /etc/apache2/httpd.conf
