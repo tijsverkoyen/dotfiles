@@ -8,3 +8,5 @@
 sudo gem install capistrano-ext
 sudo gem install forkcms_3_deploy
 sudo gem install sumodev_deploy
+sudo gem install compass
+sudo gem install css_parser
