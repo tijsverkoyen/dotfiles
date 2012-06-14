@@ -7,7 +7,7 @@ export VISUAL="mate -w"
 export ZSH_THEME="defv"
 
 # load plugins
-plugins=(cap gem git osx rails3 ruby brew)
+plugins=(cap gem git osx rails3 ruby brew symfony2)
 
 # source
 source $ZSH/oh-my-zsh.sh
