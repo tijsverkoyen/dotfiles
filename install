@@ -42,6 +42,26 @@ function install_template {
 	fi
 }
 
+function install_template_as_root {
+	if [ -f $1 ]
+	then
+		cp $1 ${1%.template}
+		sed -i '' "s/{{USER}}/$USER/" $CURRENTDIR/${1%.template}
+
+		if [ -h $2 ]
+		then
+			sudo rm $2
+		else
+			if [ -f $2 ]
+			then
+				sudo mv $2 $2.old
+			fi
+		fi
+
+		sudo ln -s $CURRENTDIR/${1%.template} $2
+	fi
+}
+
 # git
 install git/.gitignore ~/.gitignore
 install git/.gitconfig ~/.gitconfig
@@ -66,5 +86,4 @@ install bin/dbdump ~/bin/db_dump
 install_template php/php.ini.template /usr/local/etc/php/5.3/php.ini
 
 # apache
-#sudo mv /etc/apache2/httpd.conf /etc/apache2/httpd.conf.old
-#sudo ln -s $CURRENTDIR/apache/httpd.conf /etc/apache2/httpd.conf
+install_template_as_root apache/httpd.conf.template /etc/apache2/httpd.conf

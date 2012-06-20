@@ -1,3 +1,4 @@
+apache/httpd.conf
 git/.gitconfig
 mysql/.my.cnf
 php/php.ini

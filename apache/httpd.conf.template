@@ -161,11 +161,11 @@ NameVirtualHost *:80
 UseCanonicalName Off
  
 <VirtualHost *:80>
-    # this will translate project.client.dev into {{HOMEDIR}}/Sites/client/project
+    # this will translate project.client.dev into /Users/{{USER}}/Sites/client/project
     # if the application doesn't support document root to be the first folder I create a symlink
-    VirtualDocumentRoot {{HOMEDIR}}/Sites/%2/%1
+    VirtualDocumentRoot /Users/{{USER}}/Sites/%2/%1
 
-	<Directory "{{HOMEDIR}}/Sites">
+	<Directory "/Users/{{USER}}/Sites">
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Order allow,deny
