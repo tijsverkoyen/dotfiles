@@ -43,24 +43,24 @@ function install_template {
 }
 
 # git
-#install git/.gitignore ~/.gitignore
-#install git/.gitconfig ~/.gitconfig
+install git/.gitignore ~/.gitignore
+install git/.gitconfig ~/.gitconfig
 
 # mysql
-#install mysql/.my.cnf ~/.my.cnf
+install mysql/.my.cnf ~/.my.cnf
 
 # ssh
-#install ssh/config ~/.ssh/config
+install ssh/config ~/.ssh/config
 
 # zsh
-#cp -R $CURRENTDIR/zsh/themes/defv.zsh-theme ~/.oh-my-zsh/themes
-#install zsh/.zsh_aliases ~/.zsh_aliases
-#install zsh/.zshrc ~/.zshrc
+cp -R $CURRENTDIR/zsh/themes/defv.zsh-theme ~/.oh-my-zsh/themes
+install zsh/.zsh_aliases ~/.zsh_aliases
+install zsh/.zshrc ~/.zshrc
 
 # scripts
-#mkdir -p ~/bin
-#install bin/new_host ~/bin/new_host
-#install bin/dbdump ~/bin/db_dump
+mkdir -p ~/bin
+install bin/new_host ~/bin/new_host
+install bin/dbdump ~/bin/db_dump
 
 # php
 install_template php/php.ini.template /usr/local/etc/php/5.3/php.ini
