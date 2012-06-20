@@ -7,6 +7,7 @@
 
 # grab the current dir
 CURRENTDIR=$(pwd)
+USER=$(whoami)
 
 # check if the file is a symlink, if so it will be removed, if not a backup will be created
 function remove_or_backup {
@@ -26,7 +27,8 @@ function install {
 	if [ -f $1 ]
 	then
 		remove_or_backup $2
-		ln -s $CURRENTDIR/$1 $2		
+		sed -i.bak "s/{{USER}}/$USER/" $CURRENTDIR/$1
+		ln -s $CURRENTDIR/$1 $2	
 	fi
 }
 
