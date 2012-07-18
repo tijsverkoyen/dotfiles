@@ -11,7 +11,7 @@ USER=$(whoami)
 
 # check if the file is a symlink, if so it will be removed, if not a backup will be created
 function remove_or_backup {
-	if [ -h $1 ] 
+	if [ -h $1 ]
 	then
 		rm $1
 	else
@@ -27,7 +27,7 @@ function install {
 	if [ -f $1 ]
 	then
 		remove_or_backup $2
-		ln -s $CURRENTDIR/$1 $2	
+		ln -s $CURRENTDIR/$1 $2
 	fi
 }
 
