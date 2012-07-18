@@ -3,8 +3,7 @@
 1. Install some applications
 2. Install needed stuff for the script (Homebrew has some dependencies)
 3. Clone the dotfiles
-3. Run the script
-4. Insta
+4. Run the script
 
 ## 1. Install some applications
 
@@ -42,7 +41,7 @@ These applications aren't (currently) available from the App-store, you can use 
 
 ## 3. Clone the dotfiles
 
-    cd ~/ && git clone https://tijsverkoyen@github.com/tijsverkoyen/dotfiles.git && cd ~/dotfiles && ./install
+    cd ~/ && git clone https://tijsverkoyen@github.com/tijsverkoyen/dotfiles.git
 
 ## 4. Run the script
 
