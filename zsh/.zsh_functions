@@ -1,0 +1,11 @@
+# create a dir and cd into it
+newdir() {
+	# show usage if there are no arguments
+	if (( $# == 0 ))
+	then
+		echo usage: newdir folder
+	else
+		mkdir -p $1
+		cd $1
+	fi
+}

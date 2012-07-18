@@ -12,6 +12,7 @@ plugins=(cap gem git osx rails3 ruby brew symfony2)
 # source
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
+source $HOME/.zsh_functions
 
 # set path
 export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
