@@ -48,5 +48,8 @@ defaults write com.apple.dock launchanim -bool false
 # Disable reply animations in Mail.app
 defaults write com.apple.Mail DisableReplyAnimations -bool true
 
+# Enable text selection in Quick Look
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
 # kill all apps that we have altered
 for app in Finder Dock Mail Safari SystemUIServer; do killall "$app" > /dev/null 2>&1; done
