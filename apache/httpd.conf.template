@@ -65,7 +65,7 @@ LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 LoadModule bonjour_module     libexec/apache2/mod_bonjour.so
 #LoadModule php5_module        libexec/apache2/libphp5.so
 # use the PHP-version we installed with brew
-LoadModule php5_module    /usr/local/Cellar/php53/5.3.13/libexec/apache2/libphp5.so
+LoadModule php5_module    /usr/local/Cellar/php53/5.3.14/libexec/apache2/libphp5.so
 #LoadModule fastcgi_module     libexec/apache2/mod_fastcgi.so
 #LoadModule xsendfile_module   libexec/apache2/mod_xsendfile.so
 
@@ -159,7 +159,7 @@ Include /private/etc/apache2/other/*.conf
 
 NameVirtualHost *:80
 UseCanonicalName Off
- 
+
 <VirtualHost *:80>
     # this will translate project.client.dev into /Users/{{USER}}/Sites/client/project
     # if the application doesn't support document root to be the first folder I create a symlink
