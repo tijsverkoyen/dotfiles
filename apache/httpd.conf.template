@@ -34,7 +34,6 @@ LoadModule expires_module libexec/apache2/mod_expires.so
 LoadModule headers_module libexec/apache2/mod_headers.so
 LoadModule ident_module libexec/apache2/mod_ident.so
 LoadModule usertrack_module libexec/apache2/mod_usertrack.so
-#LoadModule unique_id_module libexec/apache2/mod_unique_id.so
 LoadModule setenvif_module libexec/apache2/mod_setenvif.so
 LoadModule version_module libexec/apache2/mod_version.so
 LoadModule proxy_module libexec/apache2/mod_proxy.so
@@ -140,11 +139,7 @@ Include /private/etc/apache2/extra/httpd-mpm.conf
 Include /private/etc/apache2/extra/httpd-autoindex.conf
 Include /private/etc/apache2/extra/httpd-languages.conf
 Include /private/etc/apache2/extra/httpd-userdir.conf
-#Include /private/etc/apache2/extra/httpd-info.conf
-#Include /private/etc/apache2/extra/httpd-vhosts.conf
 Include /private/etc/apache2/extra/httpd-manual.conf
-#Include /private/etc/apache2/extra/httpd-dav.conf
-#Include /private/etc/apache2/extra/httpd-default.conf
 
 <IfModule ssl_module>
     SSLRandomSeed startup builtin
