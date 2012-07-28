@@ -22,19 +22,21 @@ brew tap josegonzalez/homebrew-php
 brew install php53 --with-mysql --with-intl --with-imap
 
 # fix pear
-pear config-set auto_discover 1
-pear update-channels
-pear upgrade
+sudo pear config-set auto_discover 1
+sudo pear update-channels
+sudo pear upgrade
 
 # install pear packages
-pear channel-discover pear.phpunit.de
-pear install PHP_Codesniffer
+sudo pear channel-discover pear.phpunit.de
+sudo pear install PHP_Codesniffer
 
 # install
 pecl install oauth
 pecl install apc
 
+echo "Make MySQL load on startup: "
+echo ""
 echo "Set MySQL password by using: "
 echo "  mysqladmin -u root password 'new-password'"
 echo "  mysqladmin -u root -h $(hostname -f) password 'new-password'"
-echo "add LoadModule php5_module    /usr/local/Cellar/php53/5.3.13/libexec/apache2/libphp5.so into /etc/apache2/httpd.conf"
+echo "add LoadModule php5_module    /usr/local/Cellar/php53/5.3.14/libexec/apache2/libphp5.so into /etc/apache2/httpd.conf"
