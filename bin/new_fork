@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# This script will create a new Fork site
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+
+# if there are no arguments we should show the usage
+if [ $# -lt 3 ]; then
+	echo Usage: new_fork [client] [name] [repo]
+	exit 1
+fi
+
+# create directory
+mkdir -p ~/Sites/$1/$2
+cd ~/Sites/$1/$2
+
+# clone Fork
+git clone git@github.com:sumocoders/forkcms.git ./
+rm -rf ./.git
+
+# init git
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin $3
+git push origin master
+git branch --set-upstream master origin/master
