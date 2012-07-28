@@ -28,7 +28,8 @@ These applications aren't (currently) available from the App-store, you can use 
 * [VLC](http://www.videolan.org/vlc)
 * [VMwareFusion](http://www.vmware.com/products/fusion/overview.html)
 * [VPN Tracker](http://www.equinux.com/us/products/vpntracker/index.html)
-* [Zend Studio](http://shop.zend.com/eu/zend-studio-for-eclipse.html)
+* <strike>[Zend Studio](http://shop.zend.com/eu/zend-studio-for-eclipse.html)</strik>
+* [PHPStorm](http://www.jetbrains.com/phpstorm/)
 
 ## 2. Install some dependencies
 
@@ -38,6 +39,10 @@ These applications aren't (currently) available from the App-store, you can use 
 2. Open the Preferences
 3. Click Downloads
 4. Install "Command Line Tools"
+
+### XQuartz
+
+1. http://xquartz.macosforge.org
 
 ## 3. Clone the dotfiles
 
