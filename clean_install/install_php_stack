@@ -34,8 +34,6 @@ sudo pear install PHP_Codesniffer
 pecl install oauth
 pecl install apc
 
-echo "Make MySQL load on startup: "
-echo ""
 echo "Set MySQL password by using: "
 echo "  mysqladmin -u root password 'new-password'"
 echo "  mysqladmin -u root -h $(hostname -f) password 'new-password'"
