@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# This script will configure bind to resolve *.dev to 127.0.0.1
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+
+# init vars
+CURRENTDIR=$(pwd)
+
+
+# create a rndc key
+sudo rndc-confgen -a -c /etc/rndc.key
+
+sudo ln -s $CURRENTDIR/${1%.template} $2
+
+# startup on boot
+launchctl load -w /System/Library/LaunchDaemons/org.isc.named.plist
+
+# clear DNS
+dscacheutil -flushcache
+
+echo "Don't forget to add an extra DNS server with ip 127.0.0.1"
