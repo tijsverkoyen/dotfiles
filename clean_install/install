@@ -10,6 +10,10 @@
 ./install_homebrew
 ./install_gems
 
+# install dev
+./install_bind
+./install_php_stack
+
 # set settings
 ./set_settings_osx
 
