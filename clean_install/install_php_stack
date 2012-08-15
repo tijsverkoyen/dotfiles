@@ -30,13 +30,16 @@ sudo mv /usr/lib/php/extensions /usr/lib/php/extensions.old
 sudo ln -s $(brew --prefix php53)/lib/php/extensions /usr/lib/php/extensions
 
 # fix pear
-sudo pear config-set auto_discover 1
-sudo pear update-channels
-sudo pear upgrade
+chmod -R ug+w $(brew --prefix php53)/lib/php
+pear config-set php_ini /usr/local/etc/php/5.3/php.ini
+pear config-set auto_discover 1
+pear update-channels
+pear upgrade
 
 # install pear packages
-sudo pear channel-discover pear.phpunit.de
-sudo pear install PHP_Codesniffer
+pear channel-discover pear.phpunit.de
+pear install PHP_Codesniffer
+pear install phpunit/PHPUnit
 
 # install
 pecl install oauth
