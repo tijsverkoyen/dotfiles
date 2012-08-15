@@ -6,8 +6,8 @@
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
 
 # install software
-./install_zsh
 ./install_homebrew
+./install_zsh
 ./install_gems
 
 # install dev
