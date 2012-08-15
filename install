@@ -88,6 +88,7 @@ install bin/dbdump ~/bin/db_dump
 
 # php
 install_template php/php.ini.template /usr/local/etc/php/5.3/php.ini
+install_template php/phpunit.template ~/bin/phpunit
 
 # apache
 install_template_as_root apache/httpd.conf.template /etc/apache2/httpd.conf
