@@ -22,6 +22,9 @@ brew tap josegonzalez/homebrew-php
 brew tap homebrew/dupes
 brew install php53 --with-mysql --with-intl --with-imap
 
+# reload the path, so we are using the correct commands
+source ~/.zshrc
+
 # fix pear
 sudo pear config-set auto_discover 1
 sudo pear update-channels
