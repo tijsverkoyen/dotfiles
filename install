@@ -8,6 +8,7 @@
 # grab the current dir
 CURRENTDIR=$(pwd)
 USER=$(whoami)
+PHP_INSTALL_DIR=$(brew --prefix php53 | sed 's/\//\\\//g')
 
 # check if the file is a symlink, if so it will be removed, if not a backup will be created
 function remove_or_backup {
@@ -37,6 +38,7 @@ function install_template {
 	then
 		cp $1 ${1%.template}
 		sed -i '' "s/{{USER}}/$USER/" $CURRENTDIR/${1%.template}
+		sed -i '' "s/{{PHP_INSTALL_DIR}}/$PHP_INSTALL_DIR/" $CURRENTDIR/${1%.template}
 		remove_or_backup $2
 		ln -s $CURRENTDIR/${1%.template} $2
 	fi
@@ -47,6 +49,7 @@ function install_template_as_root {
 	then
 		cp $1 ${1%.template}
 		sed -i '' "s/{{USER}}/$USER/" $CURRENTDIR/${1%.template}
+		sed -i '' "s/{{PHP_INSTALL_DIR}}/$PHP_INSTALL_DIR/" $CURRENTDIR/${1%.template}
 
 		if [ -h $2 ]
 		then
