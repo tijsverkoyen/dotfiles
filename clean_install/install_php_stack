@@ -19,6 +19,7 @@ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 # install PHP
 brew tap josegonzalez/homebrew-php
+brew tap homebrew/dupes
 brew install php53 --with-mysql --with-intl --with-imap
 
 # fix pear
