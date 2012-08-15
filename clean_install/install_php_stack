@@ -14,7 +14,7 @@ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --
 
 # To launch on startup:	@todo	werkt niet door de versienummer
 mkdir -p ~/Library/LaunchAgents
-cp /usr/local/Cellar/mysql/5.5.25a/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents/
+cp $(brew --prefix mysql)/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents/
 launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 # install PHP
@@ -37,4 +37,4 @@ pecl install apc
 echo "Set MySQL password by using: "
 echo "  mysqladmin -u root password 'new-password'"
 echo "  mysqladmin -u root -h $(hostname -f) password 'new-password'"
-echo "add LoadModule php5_module    /usr/local/Cellar/php53/5.3.14/libexec/apache2/libphp5.so into /etc/apache2/httpd.conf"
+echo "add LoadModule php5_module    $(brew --prefix php53)/libexec/apache2/libphp5.so into /etc/apache2/httpd.conf"
