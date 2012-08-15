@@ -25,6 +25,10 @@ brew install php53 --with-mysql --with-intl --with-imap
 # reload the path, so we are using the correct commands
 source ~/.zshrc
 
+# symlink the extensions
+sudo mv /usr/lib/php/extensions /usr/lib/php/extensions.old
+sudo ln -s $(brew --prefix php53)/lib/php/extensions /usr/lib/php/extensions
+
 # fix pear
 sudo pear config-set auto_discover 1
 sudo pear update-channels
