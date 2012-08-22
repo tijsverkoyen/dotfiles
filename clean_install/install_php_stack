@@ -45,6 +45,9 @@ pear install phpunit/PHPUnit
 pecl install oauth
 pecl install apc
 
+# install xdebug
+brew install php53-xdebug
+
 echo "Set MySQL password by using: "
 echo "  mysqladmin -u root password 'new-password'"
 echo "  mysqladmin -u root -h $(hostname -f) password 'new-password'"

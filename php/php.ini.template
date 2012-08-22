@@ -1913,11 +1913,6 @@ ldap.max_links = -1
 ; Set it to 0 to allow all operations
 ;xsl.security_prefs = 44
 
-[zend debugger]
-zend_extension="/Users/{{USER}}/dotfiles/php/ZendDebugger.so"
-zend_debugger.allow_hosts=127.0.0.1/32
-zend_debugger.expose_remotely=always
-
 [oauth]
 extension="oauth.so"
 
@@ -1926,6 +1921,12 @@ extension="apc.so"
 
 [composer]
 detect_unicode = Off
+
+[xdebug]
+zend_extension="/usr/local/Cellar/php53-xdebug/2.2.1/xdebug.so"
+xdebug.remote_enable=true
+xdebug.idekey = "PHPSTORM"
+
 
 ; Local Variables:
 ; tab-width: 4
