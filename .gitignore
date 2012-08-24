@@ -4,3 +4,4 @@ mysql/.my.cnf
 php/php.ini
 php/phpunit
 ssh/config
+irssi/config
