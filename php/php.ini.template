@@ -1926,6 +1926,9 @@ detect_unicode = Off
 zend_extension="/usr/local/Cellar/php53-xdebug/2.2.1/xdebug.so"
 xdebug.remote_enable=true
 xdebug.idekey = "PHPSTORM"
+xdebug.var_display_max_children=-1
+xdebug.var_display_max_data=-1
+xdebug.var_display_max_depth=-1
 
 
 ; Local Variables:
