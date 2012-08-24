@@ -1,0 +1,173 @@
+# connect to the different servers
+servers = (
+);
+
+# name the chatnets and send some commando's which will authenticate us
+chatnets = {
+};
+
+# set the channels we should join automatically
+channels = (
+);
+
+# define the prefeerd order of our windows
+windows = {
+	1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+}
+
+# some stuff we don't want to see
+ignores = (
+	# away-massages
+	{ level = "ACTIONS"; pattern = "is (away|gone|back)"; regexp = "yes"; },
+	# now playing messages
+	{ level = "ACTIONS"; pattern = "NP:*"; regexp = "yes"; },
+	{ level = "ACTIONS"; pattern = "now playing:*"; regexp = "yes"; },
+	# mode-changes
+	{ level = "MODES"; channels = ( "&bitlbee" ); }
+);
+
+# stuff we like should be hilighted
+hilights = (
+);
+
+settings = {
+	# who are you
+	core = { real_name = "xxx"; user_name = "xxx"; nick = "xxx"; };
+	# use a theme
+	"fe-common/core" = { theme = "tys.theme"; autolog = "yes"; term_charset = "utf-8"; };
+	# trackbar-plugin
+	"perl/core/scripts" = { trackbar_string = "-"; trackbar_style = "%w"; };
+	"fe-text" = { actlist_sort = "refnum"; };
+};
+
+logs = { };
+
+# some aliases we use
+aliases = {
+  exit = "quit";
+  date = "time";
+  last = "lastlog";
+  n = "names";
+  wc = "window close";
+  chat = "dcc chat";
+  run = "SCRIPT LOAD";
+  calc = "exec - if command -v bc >/dev/null 2>&1\\; then printf '%s=' '$*'\\; echo '$*' | bc -l\\; else echo bc was not found\\; fi";
+  invitelist = "mode $C +I";
+  unset = "set -clear";
+  reset = "set -default";
+  w = "window";
+  # don't have a clue, something Defv wrote a while ago
+  hilightprob = "/format -reset pubmsg_me";
+};
+
+statusbar = {
+  # formats:
+  # when using {templates}, the template is shown only if it's argument isn't
+  # empty unless no argument is given. for example {sb} is printed always,
+  # but {sb $T} is printed only if $T isn't empty.
+
+  items = {
+    # start/end text in statusbars
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+
+    topicbarstart = "{topicsbstart}";
+    topicbarend = "{topicsbend}";
+
+    # treated "normally", you could change the time/user name to whatever
+    time = "{sb $Z}";
+    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+
+    # treated specially .. window is printed with non-empty windows,
+    # window_empty is printed with empty windows
+    window = "{sb $winref:$itemname{sbmode $M}}";
+    window_empty = "{sb $winref{sbservertag $tag}}";
+    prompt = "{prompt $[.15]itemname}";
+    prompt_empty = "{prompt $winname}";
+    topic = " $topic";
+    topic_empty = " Irssi v$J - http://www.irssi.org";
+
+    # all of these treated specially, they're only displayed when needed
+    lag = "{sb Lag: $0-}";
+    act = "{sb Act: $0-}";
+    more = "-- more --";
+  };
+
+  # there's two type of statusbars. root statusbars are either at the top
+  # of the screen or at the bottom of the screen. window statusbars are at
+  # the top/bottom of each split window in screen.
+  default = {
+    # the "default statusbar" to be displayed at the bottom of the window.
+    # contains all the normal items.
+    window = {
+      disabled = "no";
+
+      # window, root
+      type = "window";
+      # top, bottom
+      placement = "bottom";
+      # number
+      position = "1";
+      # active, inactive, always
+      visible = "active";
+
+      # list of items in statusbar in the display order
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    # statusbar to use in inactive split windows
+    window_inact = {
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "inactive";
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    # we treat input line as yet another statusbar :) It's possible to
+    # add other items before or after the input line item.
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      # we want to be at the bottom always
+      position = "100";
+      visible = "always";
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        # treated specially, this is the real input line.
+        input = { priority = "10"; };
+      };
+    };
+
+    # topicbar
+    topic = {
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+      items = {
+        topicbarstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        topicbarend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
