@@ -8,11 +8,11 @@
 # init vars
 CURRENTDIR=$(pwd)
 
-
 # create a rndc key
 sudo rndc-confgen -a -c /etc/rndc.key
 
-sudo ln -s $CURRENTDIR/${1%.template} $2
+sudo ln -s $CURRENTDIR/../named/named.conf /etc/named.conf
+sudo ln -s $CURRENTDIR/../named/dev.zone /var/named/dev.zone
 
 # startup on boot
 launchctl load -w /System/Library/LaunchDaemons/org.isc.named.plist
