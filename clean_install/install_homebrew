@@ -5,13 +5,13 @@
 # @version	1.0.0
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
 # install brew
-/usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 
 # update and upgrade brew
 brew doctor
 brew update
 brew upgrade
-	
+
 # install some packages
 brew install cowsay
 brew install wget
