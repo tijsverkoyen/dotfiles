@@ -1930,6 +1930,9 @@ xdebug.var_display_max_children=-1
 xdebug.var_display_max_data=-1
 xdebug.var_display_max_depth=-1
 
+[pdflib]
+extension="/Users/{{USER}}/dotfiles/php/libpdf_php.so"
+
 [imagick]
 extension="/usr/local/Cellar/php53-imagick/3.0.1/imagick.so"
 
