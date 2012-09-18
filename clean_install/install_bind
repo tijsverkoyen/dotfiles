@@ -10,6 +10,7 @@ CURRENTDIR=$(pwd)
 
 # create a rndc key
 sudo rndc-confgen -a -c /etc/rndc.key
+sudo chmod 644 /etc/rndc.key
 
 sudo mv /etc/named.conf /etc/named.conf.old
 sudo ln -s $CURRENTDIR/../named/named.conf /etc/named.conf
