@@ -97,4 +97,5 @@ install_template_as_root apache/httpd.conf.template /etc/apache2/httpd.conf
 mkdir -p ~/.irssi
 install_template irssi/config.template ~/.irssi/config
 install irssi/tys.theme ~/.irssi/tys.theme
-ln -s $CURRENTDIR/irssi/scripts ~/.irssi/scripts
+rm -rf ~/.irssi/scripts
+ln -s $CURRENTDIR/irssi/scripts/ ~/.irssi/scripts
