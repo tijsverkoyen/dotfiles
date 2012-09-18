@@ -47,6 +47,7 @@ pecl install apc
 
 # install xdebug
 brew install php53-xdebug
+rm /usr/local/etc/php/5.3/conf.d/ext-xdebug.ini
 
 # install XHProf
 brew install php53-xhprof
