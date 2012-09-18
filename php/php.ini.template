@@ -1930,6 +1930,9 @@ xdebug.var_display_max_children=-1
 xdebug.var_display_max_data=-1
 xdebug.var_display_max_depth=-1
 
+[xhprof]
+extension="/usr/local/Cellar/php53-xhprof/0.9.2/xhprof.so"
+xhprof.output_dir="/tmp/xhprof"
 
 ; Local Variables:
 ; tab-width: 4

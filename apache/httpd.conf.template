@@ -163,3 +163,6 @@ UseCanonicalName Off
         Allow from all
     </Directory>
 </VirtualHost>
+
+php_value auto_prepend_file "/Users/{{USER}}/Sites/dev/xhprof/external/header.php"
+php_value auto_append_file "/Users/{{USER}}/Sites/dev/xhprof/external/footer.php"
