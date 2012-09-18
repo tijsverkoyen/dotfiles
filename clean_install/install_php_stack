@@ -49,6 +49,10 @@ pecl install apc
 brew install php53-xdebug
 rm /usr/local/etc/php/5.3/conf.d/ext-xdebug.ini
 
+# install imagick
+brew install php53-imagick
+rm /usr/local/etc/php/5.3/conf.d/ext-imagick.ini
+
 # install XHProf
 brew install php53-xhprof
 rm /usr/local/etc/php/5.3/conf.d/ext-xhprof.ini
