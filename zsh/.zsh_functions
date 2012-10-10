@@ -10,7 +10,7 @@ newdir() {
 	fi
 }
 
-# This script will search a project and open it
+# open a project
 openproject() {
 	# show usage if there are no arguments
 	if (( $# < 1 ))
