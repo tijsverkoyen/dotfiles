@@ -9,3 +9,19 @@ newdir() {
 		cd $1
 	fi
 }
+
+# This script will search a project and open it
+openproject() {
+	# show usage if there are no arguments
+	if (( $# < 1 ))
+	then
+		echo usage: openproject projectname
+	else
+		# find a directory that contains the phpstorm-preferences
+		IDEA_PATH=$(find  ~/Sites/*/$1/.idea -type d -name .idea)
+		# @todo	errorhandling for non existing projects
+		cd IDEA_PATH/..
+		open IDEA_PATH/..
+		pstorm IDEA_PATH/..
+	fi
+}
