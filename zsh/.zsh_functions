@@ -25,3 +25,10 @@ openproject() {
 		pstorm IDEA_PATH/..
 	fi
 }
+
+findproject() {
+	compadd `ls -l ~/Sites/*/ | awk '{ print $9 }'`
+}
+
+alias p="openproject"
+compdef findproject openproject
