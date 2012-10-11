@@ -19,6 +19,7 @@ openproject() {
 	else
 		# find a directory that contains the phpstorm-preferences
 		IDEA_PATH=$(find  ~/Sites/*/$1/.idea -type d -name .idea)
+
 		# @todo	errorhandling for non existing projects
 		cd IDEA_PATH/..
 		open IDEA_PATH/..
@@ -27,7 +28,7 @@ openproject() {
 }
 
 findproject() {
-	compadd `ls -l ~/Sites/*/ | awk '{ print $9 }'`
+	compadd `find ~/Sites/ -maxdepth 2 -mindepth 2 -type d | cut -d \/ -f 7`
 }
 
 alias p="openproject"
