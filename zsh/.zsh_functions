@@ -1,7 +1,35 @@
+# find dir
+find_project_dir() {
+	# show usage if there are no arguments
+	if (( $# < 1 ))
+	then
+		echo usage: find_project_dir projectname
+	else
+		echo $(find  ~/Sites/*/$1/.idea -type d -name .idea)
+	fi
+}
+
+# find a project (used for autocompletion)
+find_project() {
+	compadd `find ~/Sites/ -maxdepth 2 -mindepth 2 -type d | cut -d \/ -f 7`
+}
+
+# navigate to a project
+navigate_to_project() {
+	# show usage if there are no arguments
+	if (( $# < 1 ))
+	then
+		echo usage: navigate_to_project projectname
+	else
+		cd $(find_project_dir $1)/..
+	fi
+}
+
+
 # create a dir and cd into it
 newdir() {
 	# show usage if there are no arguments
-	if (( $# == 0 ))
+	if (( $# < 1 ))
 	then
 		echo usage: newdir folder
 	else
@@ -11,25 +39,39 @@ newdir() {
 }
 
 # open a project
-openproject() {
+open_project() {
 	# show usage if there are no arguments
 	if (( $# < 1 ))
 	then
-		echo usage: openproject projectname
+		echo usage: open_project projectname
 	else
-		# find a directory that contains the phpstorm-preferences
-		IDEA_PATH=$(find  ~/Sites/*/$1/.idea -type d -name .idea)
-
-		# @todo	errorhandling for non existing projects
-		cd IDEA_PATH/..
-		open IDEA_PATH/..
-		pstorm IDEA_PATH/..
+		$(navigate_to_project $1)
+		$(open_project_in_browser $1);
+		pstorm $(find_project_dir $1)/..
 	fi
 }
 
-findproject() {
-	compadd `find ~/Sites/ -maxdepth 2 -mindepth 2 -type d | cut -d \/ -f 7`
+# open a project in a browser
+open_project_in_browser() {
+	# show usage if there are no arguments
+	if (( $# < 1 ))
+	then
+		echo usage: open_project_in_browser projectname
+	else
+		# find a directory that contains the phpstorm-preferences
+		CHUNKS=(`echo $(find_project_dir $1) | tr "/" "\n"`)
+		URL="http://${CHUNKS[5]}.${CHUNKS[4]}.dev"
+
+		open -a /Applications/Google\ Chrome.app $URL
+	fi
 }
 
-alias p="openproject"
-compdef findproject openproject
+# autocomplete for the functions
+compdef find_project navigate_to_project
+compdef find_project open_project
+compdef find_project open_project_in_browser
+
+# aliases for faster usage
+alias b="open_project_in_browser"
+alias n="navigate_to_project"
+alias p="open_project"
