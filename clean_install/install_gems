@@ -5,8 +5,8 @@
 # @version	1.0.0
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
 
-sudo gem install capistrano-ext
-sudo gem install forkcms_3_deploy
-sudo gem install sumodev_deploy
-sudo gem install compass
-sudo gem install css_parser
+gem install capistrano-ext
+gem install forkcms_deploy
+gem install sumodev_deploy
+gem install compass
+gem install css_parser
