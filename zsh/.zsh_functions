@@ -45,8 +45,8 @@ open_project() {
 	then
 		echo usage: open_project projectname
 	else
-		$(navigate_to_project $1)
-		$(open_project_in_browser $1);
+		$(open_project_in_browser $1)
+		cd $(find_project_dir $1)/..
 		pstorm $(find_project_dir $1)/..
 	fi
 }
