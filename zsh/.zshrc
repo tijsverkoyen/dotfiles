@@ -15,7 +15,7 @@ source $HOME/.zsh_aliases
 source $HOME/.zsh_functions
 
 # set path
-export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin
+export PATH=~.rvm/bin:~/bin:/usr/local/bin:$PATH
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
