@@ -85,6 +85,7 @@ install zsh/.zshrc ~/.zshrc
 mkdir -p ~/bin
 install bin/new_host ~/bin/new_host
 install bin/dbdump ~/bin/db_dump
+install_template bin/fork_sniff.template ~/bin/fork_sniff
 
 # php
 install_template php/php.ini.template /usr/local/etc/php/5.3/php.ini

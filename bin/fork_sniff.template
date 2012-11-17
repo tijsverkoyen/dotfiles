@@ -1,0 +1,1 @@
+phpcs -v --standard="/Users/tijs/dotfiles/bin/Fork" --ignore=library,cache --extensions=php --report=full ./

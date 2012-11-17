@@ -5,3 +5,4 @@ php/php.ini
 php/phpunit
 ssh/config
 irssi/config
+bin/fork_sniff
