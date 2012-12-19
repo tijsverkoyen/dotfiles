@@ -25,6 +25,25 @@ navigate_to_project() {
 	fi
 }
 
+# loop dirs and execute a command
+fordir() {
+	# show usage if there are no arguments
+	if (( $# < 1 ))
+	then
+		echo usage: fordir command
+	else
+		for dir in *
+		do
+			if [[ ! -h $dir ]]
+			then
+				cd $dir;
+				echo $dir;
+				eval $@
+				cd ..;
+			fi
+		done
+	fi
+}
 
 # create a dir and cd into it
 newdir() {
