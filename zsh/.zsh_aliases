@@ -1,8 +1,3 @@
-# timesavers
-alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy"
-
-# ls
 alias ls="ls -ahGl"
-
-# copy pwd to the clipboard
-alias cpwd="pwd | pbcopy"
+alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy" 	# copy public sshkey to the clipboard
+alias cpwd="pwd | pbcopy"						# copy pwd to the clipboard
