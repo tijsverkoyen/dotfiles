@@ -3,3 +3,6 @@ alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy"
 
 # ls
 alias ls="ls -ahGl"
+
+# copy pwd to the clipboard
+alias cpwd="pwd | pbcopy"
