@@ -12,7 +12,7 @@ brew install mysql
 unset TMPDIR
 mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
 
-# To launch on startup:	@todo	werkt niet door de versienummer
+# To launch on startup:
 mkdir -p ~/Library/LaunchAgents
 cp $(brew --prefix mysql)/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents/
 launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
@@ -20,7 +20,8 @@ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 # install PHP
 brew tap josegonzalez/homebrew-php
 brew tap homebrew/dupes
-brew install php53 --with-mysql --with-intl --with-imap
+brew install php53 --with-mysql --with-imap
+brew install php53-intl
 
 # reload the path, so we are using the correct commands
 source ~/.zshrc
