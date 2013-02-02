@@ -58,6 +58,12 @@ rm /usr/local/etc/php/5.3/conf.d/ext-imagick.ini
 brew install php53-xhprof
 rm /usr/local/etc/php/5.3/conf.d/ext-xhprof.ini
 
+# install composer
+cd ~/dotfiles/bin
+curl -s https://getcomposer.org/installer | php
+mv ./composer.phar ~/dotfiles/bin/composer
+ln -s ~/dotfiles/bin/composer ~/bin/composer
+
 echo "Set MySQL password by using: "
 echo "  mysqladmin -u root password 'new-password'"
 echo "  mysqladmin -u root -h $(hostname -f) password 'new-password'"
