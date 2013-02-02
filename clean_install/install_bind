@@ -5,21 +5,18 @@
 # @version	1.0.0
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
 
-# init vars
-CURRENTDIR=$(pwd)
-
 # create a rndc key
 sudo rndc-confgen -a -c /etc/rndc.key
 sudo chmod 644 /etc/rndc.key
 
 sudo mv /etc/named.conf /etc/named.conf.old
-sudo ln -s $CURRENTDIR/../named/named.conf /etc/named.conf
-sudo ln -s $CURRENTDIR/../named/dev.zone /var/named/dev.zone
+sudo cp ../named/named.conf /etc/named.conf
+sudo cp ../named/dev.zone /var/named/dev.zone
 
 # startup on boot
-launchctl load -w /System/Library/LaunchDaemons/org.isc.named.plist
+sudo launchctl load -w /System/Library/LaunchDaemons/org.isc.named.plist
 
 # clear DNS
 sudo killall -HUP mDNSResponder
 
-echo "Don't forget to add an extra DNS server with ip 127.0.0.1"
+echo "Don't forget to add an extra DNS server with ip 127.0.0.1 and reboot your mac"
