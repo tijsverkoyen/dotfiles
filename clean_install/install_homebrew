@@ -5,7 +5,7 @@
 # @version	1.0.0
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
 # install brew
-ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 
 # update and upgrade brew
 brew doctor
@@ -13,10 +13,5 @@ brew update
 brew upgrade
 
 # install some packages
-brew install cowsay
-brew install wget
-brew install git
-brew install gd
-brew install imagemagick
-brew install mcrypt
-brew install autoconf
+brew install cowsay wget git gd imagemagick mcrypt autoconf curl bash
+
