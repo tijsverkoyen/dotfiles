@@ -44,10 +44,19 @@ These applications aren't (currently) available from the App-store, you can use 
 
 1. http://xquartz.macosforge.org
 
+### Homebrew & Git
+
+	ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+    brew doctor
+    brew update
+    brew upgrade
+    brew install git
+
 ## 3. Clone the dotfiles
 
     cd ~/ && git clone https://tijsverkoyen@github.com/tijsverkoyen/dotfiles.git
 
 ## 4. Run the script
 
+    cd ~/dotfiles/ && ./install
     cd ~/dotfiles/clean_install && ./install
