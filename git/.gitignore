@@ -23,3 +23,6 @@ Thumbs.db
 # SASS
 .sass-cache
 .rvmrc
+
+# Symfony console
+*.php~
