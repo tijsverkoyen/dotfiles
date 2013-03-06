@@ -12,7 +12,6 @@
 ./install_gems
 
 # install dev
-./install_bind
 ./install_php_stack
 
 # set settings
