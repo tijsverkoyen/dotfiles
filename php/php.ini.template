@@ -1929,6 +1929,7 @@ xdebug.idekey = "PHPSTORM"
 xdebug.var_display_max_children=-1
 xdebug.var_display_max_data=-1
 xdebug.var_display_max_depth=-1
+xdebug.max_nesting_level=250
 
 [pdflib]
 extension="/Users/{{USER}}/dotfiles/php/libpdf_php.so"
