@@ -68,6 +68,7 @@ function install_template_as_root {
 # git
 install git/.gitignore ~/.gitignore
 install git/.gitconfig ~/.gitconfig
+ln -s $CURRENTDIR/git/git_template ~/.git_template
 
 # mysql
 install mysql/.my.cnf ~/.my.cnf

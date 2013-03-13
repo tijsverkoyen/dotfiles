@@ -1,0 +1,32 @@
+#!/bin/sh
+
+unset GIT_DIR
+
+OWD=$PWD
+PREVIOUS_HEAD=$1
+CURRENT_HEAD=$2
+BRANCH=$3
+
+if [[ $BRANCH == 0 ]]; then exit; fi
+
+# Go to the current working directory
+cd ./$(git rev-parse --show-cdup)
+
+# See if we have a compass config
+CONFIGS=$(find . -name config.rb)
+
+for CONFIG in $CONFIGS; do
+  SASS_ROOT_DIR=$(dirname $CONFIG)
+
+  cd $SASS_ROOT_DIR
+
+  HAS_COMPILED_CSS=$(ls css) # Is our CSS already compiled?
+  CHANGED_ASSETS=$(git diff --name-only $PREVIOUS_HEAD $CURRENT_HEAD $PWD) # Are assets changed?
+
+  if [ "$CHANGED_ASSETS" ] || ! [ "$HAS_COMPILED_CSS" ]; then
+    echo "Compiling SASS"
+    compass compile --force -s expanded
+  fi
+done
+
+cd $OWD;

@@ -16,3 +16,5 @@
 	editor = mate -w
 [branch]
 	autosetuprebase = always
+[init]
+	templatedir = ~/.git_template
