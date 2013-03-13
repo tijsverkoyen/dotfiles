@@ -25,7 +25,7 @@ for CONFIG in $CONFIGS; do
 
   if [ "$CHANGED_ASSETS" ] || ! [ "$HAS_COMPILED_CSS" ]; then
     echo "Compiling SASS"
-    compass compile --force -s expanded
+    compass clean && compass compile -s expanded
   fi
 done
 
