@@ -85,6 +85,12 @@ open_project_in_browser() {
 	fi
 }
 
+# copy pwd to the clipboard
+copy_pwd_to_clipboard() {
+	PWD=(`pwd`)
+	echo $PWD | pbcopy	
+}
+
 # autocomplete for the functions
 compdef find_project navigate_to_project
 compdef find_project open_project
@@ -94,3 +100,4 @@ compdef find_project open_project_in_browser
 alias b="open_project_in_browser"
 alias n="navigate_to_project"
 alias p="open_project"
+alias cpwd="copy_pwd_to_clipboard"
