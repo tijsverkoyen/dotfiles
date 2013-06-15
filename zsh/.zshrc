@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 export VISUAL="mate -w"
 
 # set custom theme
-export ZSH_THEME="defv"
+export ZSH_THEME="tijs"
 
 # load plugins
 plugins=(cap gem git osx rails3 ruby brew symfony2)
