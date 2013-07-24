@@ -1938,8 +1938,8 @@ extension="/Users/{{USER}}/dotfiles/php/libpdf_php.so"
 extension="/usr/local/Cellar/php53-imagick/3.0.1/imagick.so"
 
 [xhprof]
-extension="/usr/local/Cellar/php53-xhprof/0.9.2/xhprof.so"
-xhprof.output_dir="/tmp/xhprof"
+;extension="/usr/local/Cellar/php53-xhprof/0.9.2/xhprof.so"
+;xhprof.output_dir="/tmp/xhprof"
 
 ; Local Variables:
 ; tab-width: 4
