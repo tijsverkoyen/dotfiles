@@ -88,7 +88,7 @@ open_project_in_browser() {
 # copy pwd to the clipboard
 copy_pwd_to_clipboard() {
 	PWD=(`pwd`)
-	echo $PWD | pbcopy	
+	echo -n $PWD | pbcopy
 }
 
 # autocomplete for the functions
