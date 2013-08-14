@@ -130,7 +130,7 @@
 			</array>
 			<key>volume</key>
 			<array>
-				<real>0.7784537672996521</real>
+				<real>1.8004051446914673</real>
 			</array>
 		</dict>
 		<key>track mixer</key>
@@ -292,7 +292,7 @@
 						<string>Audio 0 0</string>
 					</dict>
 					<key>volume</key>
-					<real>1.6904973983764648</real>
+					<real>1.8899897336959839</real>
 				</dict>
 			</array>
 		</dict>
