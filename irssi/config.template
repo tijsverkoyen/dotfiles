@@ -24,6 +24,8 @@ ignores = (
 	{ level = "ACTIONS"; pattern = "now playing:*"; regexp = "yes"; },
 	# mode-changes
 	{ level = "MODES"; channels = ( "&bitlbee" ); }
+	# crowded channels
+	{ level = "JOINS QUITS"; channels = ( "#symfony" ); }
 );
 
 # stuff we like should be hilighted
