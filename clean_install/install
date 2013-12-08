@@ -13,7 +13,6 @@
 
 # install dev
 ./install_pow
-./install_php_stack
 
 # set settings
 ./set_settings_osx
