@@ -8,7 +8,6 @@
 # install software
 ./install_homebrew
 ./install_zsh
-./install_rvm
 ./install_gems
 
 # install dev
