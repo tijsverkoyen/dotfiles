@@ -8,7 +8,6 @@
 # grab the current dir
 CURRENTDIR=$(pwd)
 USER=$(whoami)
-PHP_INSTALL_DIR=$(brew --prefix php53 | sed 's/\//\\\//g')
 
 # check if the file is a symlink, if so it will be removed, if not a backup will be created
 function remove_or_backup {
@@ -85,9 +84,6 @@ install zsh/.zshrc ~/.zshrc
 
 # scripts
 mkdir -p ~/bin
-install bin/new_host ~/bin/new_host
-install bin/dbdump ~/bin/db_dump
-install_template bin/fork_sniff.template ~/bin/fork_sniff
 
 # php
 install_template php/php.ini.template /usr/local/etc/php/5.3/php.ini
