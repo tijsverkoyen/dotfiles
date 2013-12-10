@@ -10,3 +10,6 @@ gem install forkcms_deploy
 gem install sumodev_deploy
 gem install compass
 gem install css_parser
+gem install bundler
+gem install librarian-chef
+gem install foreman
