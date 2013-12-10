@@ -5,7 +5,7 @@
 # @version	1.0.0
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
 # install brew
-ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
 
 # update and upgrade brew
 brew doctor
