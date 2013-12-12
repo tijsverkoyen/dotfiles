@@ -1,7 +1,6 @@
 apache/httpd.conf
 git/.gitconfig
 mysql/.my.cnf
-php/php.ini
 php/phpunit
 ssh/config
 irssi/config
