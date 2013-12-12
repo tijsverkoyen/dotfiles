@@ -7,3 +7,7 @@
 
 # MySQL
 brew install mysql
+
+# install coffee-script
+brew install node
+npm install -g coffee-script
