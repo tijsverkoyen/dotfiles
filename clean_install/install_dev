@@ -18,6 +18,10 @@ npm install -g coffee-script
 # install php.ini
 sudo ln -s $CURRENTDIR/php/php.ini /etc/php.ini
 
+# install composer
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
 # install pear and PHPUnit
 cd /usr/lib/php &&
 sudo php install-pear-nozlib.phar &&
