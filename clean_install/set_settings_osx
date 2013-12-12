@@ -91,6 +91,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Show hidden files by default
 defaults write com.apple.Finder AppleShowAllFiles -bool true
 
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
 
 ## Safari
 
