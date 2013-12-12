@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# This script will install some stuff related to our dev
+#
+# @version	1.0.0
+# @author	Tijs Verkoyen <tijs@sumocoders.be>
+
+# MySQL
+brew install mysql
