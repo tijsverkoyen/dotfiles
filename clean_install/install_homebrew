@@ -13,5 +13,5 @@ brew update
 brew upgrade
 
 # install some packages
-brew install cowsay wget git gd autoconf curl bash node
+brew install cowsay wget git gd autoconf curl bash
 
