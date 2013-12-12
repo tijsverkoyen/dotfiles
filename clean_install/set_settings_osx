@@ -29,6 +29,9 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Enable repeat on keydown
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# Disable sound effect when changing volume
+defaults write -g com.apple.sound.beep.feedback -integer 0
+
 ## UI
 
 # Disable menu bar transparency
