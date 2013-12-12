@@ -11,3 +11,14 @@ brew install mysql
 # install coffee-script
 brew install node
 npm install -g coffee-script
+
+# install pear and PHPUnit
+cd /usr/lib/php &&
+sudo php install-pear-nozlib.phar &&
+sudo pear channel-update pear.php.net &&
+sudo pecl channel-update pecl.php.net &&
+sudo pear upgrade-all &&
+sudo pear channel-discover pear.phpunit.de  &&
+sudo pear channel-discover pear.symfony-project.com &&
+sudo pear channel-discover pear.symfony.com &&
+sudo pear install --alldeps phpunit/PHPUnit
