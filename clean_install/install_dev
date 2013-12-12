@@ -39,3 +39,7 @@ chmod a+x /usr/local/bin/phpcsfixer
 
 # install phpcodesniffer
 sudo pear install PHP_CodeSniffer
+
+# install PHPCompatibility
+cd /usr/lib/php/pear/PHP/CodeSniffer/Standards &&
+sudo git clone git@github.com:wimg/PHPCompatibility.git PHPCompatibility
