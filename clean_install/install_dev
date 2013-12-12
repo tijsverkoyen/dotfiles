@@ -32,3 +32,7 @@ sudo pear channel-discover pear.phpunit.de  &&
 sudo pear channel-discover pear.symfony-project.com &&
 sudo pear channel-discover pear.symfony.com &&
 sudo pear install --alldeps phpunit/PHPUnit
+
+# install phpcsfixer
+curl http://cs.sensiolabs.org/get/php-cs-fixer.phar -o /usr/local/bin/phpcsfixer
+chmod a+x /usr/local/bin/phpcsfixer
