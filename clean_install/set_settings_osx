@@ -94,6 +94,12 @@ defaults write com.apple.Finder AppleShowAllFiles -bool true
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
+# Use current directory as default search scope in Finder
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Show Status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
 
 ## Safari
 
