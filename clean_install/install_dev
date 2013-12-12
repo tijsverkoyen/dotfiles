@@ -5,12 +5,18 @@
 # @version	1.0.0
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
 
+# grab the current dir
+CURRENTDIR=$(pwd)
+
 # MySQL
 brew install mysql
 
 # install coffee-script
 brew install node
 npm install -g coffee-script
+
+# install php.ini
+sudo ln -s $CURRENTDIR/php/php.ini /etc/php.ini
 
 # install pear and PHPUnit
 cd /usr/lib/php &&
