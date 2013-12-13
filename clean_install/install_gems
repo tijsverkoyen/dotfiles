@@ -13,3 +13,4 @@ sudo gem install css_parser
 sudo gem install bundler
 sudo gem install librarian-chef
 sudo gem install foreman
+sudo gem install sumodev
