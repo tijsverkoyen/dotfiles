@@ -13,7 +13,7 @@ brew install mysql
 
 # install coffee-script
 brew install node
-npm install -g coffee-script
+sudo npm install -g coffee-script
 
 # install php.ini
 sudo ln -s $CURRENTDIR/php/php.ini /etc/php.ini
