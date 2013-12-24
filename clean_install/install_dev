@@ -15,6 +15,9 @@ brew install mysql
 brew install node
 sudo npm install -g coffee-script
 
+# install xdebug
+sudo ln -s $CURRENTDIR/php/xdebug.so /usr/lib/php/extensions/no-debug-non-zts-20100525/xdebug.so
+
 # install php.ini
 sudo ln -s $CURRENTDIR/php/php.ini /etc/php.ini
 
