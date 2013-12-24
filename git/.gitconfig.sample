@@ -18,3 +18,5 @@
 	autosetuprebase = always
 [init]
 	templatedir = ~/.git_template
+[push]
+	default = simple
