@@ -1,4 +1,3 @@
 alias ls="ls -ahGl"
 alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy" 	# copy public sshkey to the clipboard
 alias gs="git status"
-alias be="bundle exec"

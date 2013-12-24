@@ -7,7 +7,7 @@ export VISUAL="mate -w"
 export ZSH_THEME="tijs"
 
 # load plugins
-plugins=(cap gem git osx rails ruby brew symfony2 vagrant composer coffee knife node npm)
+plugins=(cap gem git osx rails ruby brew symfony2 vagrant composer coffee knife node npm bundler)
 
 # source
 source $ZSH/oh-my-zsh.sh
