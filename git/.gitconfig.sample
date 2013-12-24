@@ -11,6 +11,7 @@
 	status = auto
 	branch = auto
 	interactive = auto
+	ui = auto
 [core]
 	excludesfile = ~/.gitignore
 	editor = mate -w
