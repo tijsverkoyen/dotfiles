@@ -6,3 +6,4 @@
 	3. seperate branch which is pushed to a different remote?
 * test the clean install on a clean system
 * symlink PHP Storm settings
+* find a way to manage projects with the same name
