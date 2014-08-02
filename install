@@ -91,3 +91,8 @@ install_template irssi/config.template ~/.irssi/config
 install irssi/tys.theme ~/.irssi/tys.theme
 rm -rf ~/.irssi/scripts
 ln -s $CURRENTDIR/irssi/scripts/ ~/.irssi/scripts
+
+# composer
+mkdir -p ~/.composer
+install php/composer.json ~/.composers/composer.json
+composer global update
