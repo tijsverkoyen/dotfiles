@@ -20,7 +20,7 @@ git commit -m "Initial commit"
 git remote add origin wrc@web02.crsolutions.be:repos/$1.supershop.dev.git
 git push origin master
 git branch --set-upstream master origin/master
-git remote add supershop wrc@web02.crsolutions.be:repos/supershop.wrc.dev.git
+git remote add supershop git@git.sumocoders.be:wrc/supershop.git
 git fetch supershop 
 git co --track -b supershop supershop/master
 git co master
