@@ -2,6 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # set editor
 export VISUAL="mate -w"
+export EDITOR="mate -w"
 
 # set custom theme
 export ZSH_THEME="tijs"
