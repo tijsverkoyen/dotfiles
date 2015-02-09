@@ -37,7 +37,7 @@ fordir() {
 			if [[ ! -h $dir ]]
 			then
 				cd $dir;
-				echo $dir;
+				echo -e "\e[32m$dir\e[39m";
 				eval $@
 				cd ..;
 			fi
