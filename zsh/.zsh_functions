@@ -11,7 +11,7 @@ find_project_dir() {
 
 # find a project (used for autocompletion)
 find_project() {
-	compadd `find ~/Sites/ -maxdepth 2 -mindepth 2 -type d | cut -d \/ -f 7`
+	compadd `find ~/Sites -maxdepth 2 -mindepth 2 -type d | cut -d \/ -f 6`
 }
 
 # navigate to a project
