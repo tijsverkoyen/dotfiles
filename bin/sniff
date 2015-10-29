@@ -1,2 +1,0 @@
-phpcsfixer fix --level=all ./
-phpcs -vwsp --standard="PSR2" --report=full ./

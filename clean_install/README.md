@@ -9,7 +9,6 @@
 
 Some applications are available from the App-store:
 
-* [Alfred](http://itunes.apple.com/be/app/alfred/id405843582?mt=12)
 * [OCRkKit](http://itunes.apple.com/be/app/ocrkit/id410309628?mt=12)
 * [Skitch](http://itunes.apple.com/be/app/skitch/id425955336?mt=12)
 * [The Unarchiver](http://itunes.apple.com/be/app/the-unarchiver/id425424353?mt=12)
@@ -17,18 +16,10 @@ Some applications are available from the App-store:
 
 These applications aren't (currently) available from the App-store, you can use the links below:
 
-* [1Password](https://agilebits.com/onepassword)
-* [CleanMyMac](http://macpaw.com/cleanmymac)
 * [Dropbox](https://www.dropbox.com)
-* [LittleSnitch](http://www.obdev.at/products/littlesnitch/index.html)
-* [Skype](http://www.skype.com)
 * [Spotify](http://www.spotify.com)
 * [TextMate](http://macromates.com)
 * [Transmit](https://www.panic.com/transmit)
-* [VLC](http://www.videolan.org/vlc)
-* [VMwareFusion](http://www.vmware.com/products/fusion/overview.html)
-* [VPN Tracker](http://www.equinux.com/us/products/vpntracker/index.html)
-* <strike>[Zend Studio](http://shop.zend.com/eu/zend-studio-for-eclipse.html)</strik>
 * [PHPStorm](http://www.jetbrains.com/phpstorm/)
 
 ## 2. Install some dependencies
@@ -43,14 +34,6 @@ These applications aren't (currently) available from the App-store, you can use 
 ### XQuartz
 
 1. http://xquartz.macosforge.org
-
-### Homebrew & Git
-
-	ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
-    brew doctor
-    brew update
-    brew upgrade
-    brew install git
 
 ## 3. Clone the dotfiles
 

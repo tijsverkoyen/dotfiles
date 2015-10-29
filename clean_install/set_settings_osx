@@ -123,13 +123,13 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-
 ## Terminal
 
 # Use the Pro theme by default in Terminal.app
-defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
-defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
-
+open ../terminal/Tijs.terminal
+defaults write com.apple.Terminal "Default Window Settings" -string "Tijs"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Tijs"
+defaults write com.apple.Terminal AutoMarkPromptLines -int 0
 
 # kill all apps that we have altered
 for app in Finder Dock Mail Safari SystemUIServer Terminal; do killall "$app" > /dev/null 2>&1; done

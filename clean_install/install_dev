@@ -8,12 +8,8 @@
 # grab the current dir
 CURRENTDIR=$(pwd)
 
-# MySQL
-brew install mysql
-
-# install coffee-script
-brew install node
-sudo npm install -g coffee-script
+# install some extra packages
+brew install mysql ruby curl
 
 # install xdebug
 sudo ln -s $CURRENTDIR/php/xdebug.so /usr/lib/php/extensions/no-debug-non-zts-20100525/xdebug.so

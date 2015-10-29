@@ -66,31 +66,22 @@ function install_template_as_root {
 
 # git
 install git/.gitignore ~/.gitignore
-install git/.gitconfig ~/.gitconfig
 ln -s $CURRENTDIR/git/git_template ~/.git_template
 
-# mysql
-install mysql/.my.cnf ~/.my.cnf
-
-# ssh
-install ssh/config ~/.ssh/config
-
 # zsh
-cp -R $CURRENTDIR/zsh/themes/defv.zsh-theme ~/.oh-my-zsh/themes
 cp -R $CURRENTDIR/zsh/themes/tijs.zsh-theme ~/.oh-my-zsh/themes
 install zsh/.zsh_aliases ~/.zsh_aliases
 install zsh/.zsh_functions ~/.zsh_functions
-install zsh/.zshrc ~/.zshrc
 
 # scripts
 mkdir -p ~/bin
 
 # irssi
-mkdir -p ~/.irssi
-install_template irssi/config.template ~/.irssi/config
-install irssi/tys.theme ~/.irssi/tys.theme
-rm -rf ~/.irssi/scripts
-ln -s $CURRENTDIR/irssi/scripts/ ~/.irssi/scripts
+#mkdir -p ~/.irssi
+#install_template irssi/config.template ~/.irssi/config
+#install irssi/tys.theme ~/.irssi/tys.theme
+#rm -rf ~/.irssi/scripts
+#ln -s $CURRENTDIR/irssi/scripts/ ~/.irssi/scripts
 
 # composer
 mkdir -p ~/.composer

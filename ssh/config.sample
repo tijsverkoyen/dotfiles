@@ -1,7 +1,0 @@
-Compression yes
-CompressionLevel 9
-ForwardAgent yes
-
-Host some_host
-	User root
-	HostName 123.4.5.6
