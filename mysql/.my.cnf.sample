@@ -1,7 +1,0 @@
-[mysqld]
-log-slow-queries = /var/log/slow-queries-log.log
-long_query_time = 0.1
-
-[client]
-user = root
-password = yoursupersecretpassword
