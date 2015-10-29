@@ -17,3 +17,6 @@ source $HOME/.zsh_functions
 
 # set path
 export PATH=~/bin:/usr/local/bin:/usr/local/Cellar/php53/5.3.15/bin:/usr/local/share/npm/bin:$PATH
+
+# gem stuff
+export GEM_PATH="~/.gem/ruby/2.0.0"
