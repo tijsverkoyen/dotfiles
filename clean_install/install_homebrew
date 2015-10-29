@@ -13,5 +13,4 @@ brew update
 brew upgrade
 
 # install some packages
-brew install cowsay wget git gd autoconf curl bash
-
+brew install cowsay wget git curl mackup ruby
