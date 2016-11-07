@@ -57,13 +57,13 @@ defaults write 'com.apple.dock' 'dashboard-in-overlay' -bool true
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-# → Top left screen corner → 
+# → Top left screen corner →
 # defaults write 'com.apple.dock' 'wvous-tl-corner' -int 0
 # defaults write 'com.apple.dock' 'wvous-tl-modifier' -int 0
 # → Top right screen corner → Mission Control
 defaults write 'com.apple.dock' 'wvous-tr-corner' -int 2
 defaults write 'com.apple.dock' 'wvous-tr-modifier' -int 0
-# → Bottom left screen corner → 
+# → Bottom left screen corner →
 # defaults write 'com.apple.dock' 'wvous-bl-corner' -int 5
 # defaults write 'com.apple.dock' 'wvous-bl-modifier' -int 0
 # → Bottom right screen corner → Mission Control
@@ -72,7 +72,7 @@ defaults write 'com.apple.dock' 'wvous-br-modifier' -int 0
 
 
 ## System Preferences → Language & Region
-# → Preferred languages → en, nl 
+# → Preferred languages → en, nl
 defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
 # → Region → Belgium
 defaults write NSGlobalDomain AppleLocale -string "en_BE"
@@ -158,7 +158,7 @@ defaults write 'com.apple.desktopservices' 'DSDontWriteNetworkStores' -bool true
 #  Nlsv: list
 #  Flwv: coverflow
 defaults write 'com.apple.finder' 'FXPreferredViewStyle' -string "clmv"
-# → enable snap-to-grid 
+# → enable snap-to-grid
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" $HOME/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" $HOME/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" $HOME/Library/Preferences/com.apple.finder.plist
@@ -188,18 +188,18 @@ defaults write 'com.apple.dock' 'static-only' -bool true
 
 
 ## Calendar → Preferences
-# → General → Start week on → Monday 
+# → General → Start week on → Monday
 defaults write 'com.apple.iCal' "first day of week" -int 1
 # → General → Day starts at → 09:00
 defaults write 'com.apple.iCal' 'first minute of day time range' 540
 
 
 ## Mail
-# Disable send and reply animations in Mail.app
-#defaults write com.apple.mail DisableReplyAnimations -bool true
-#defaults write com.apple.mail DisableSendAnimations -bool true
-## Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+# → Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 #defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+# → Disable send and reply animations
+#defaults write com.apple.Mail DisableSendAnimations -bool true
+#defaults write com.apple.Mail DisableReplyAnimations -bool true
 
 
 ## Some random UX stuff
