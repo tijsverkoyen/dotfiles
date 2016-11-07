@@ -1,9 +1,0 @@
-#!/bin/bash
-#
-# This script will install pow
-#
-# @version	1.0.0
-# @author	Tijs Verkoyen <tijs@sumocoders.be>
-
-echo 'export POW_DST_PORT=81' >> ~/.powconfig
-curl get.pow.cx | sh
