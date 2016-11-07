@@ -1,8 +1,0 @@
-apache/httpd.conf
-git/.gitconfig
-mysql/.my.cnf
-php/phpunit
-ssh/config
-irssi/config
-bin/fork_sniff
-bin/composer
