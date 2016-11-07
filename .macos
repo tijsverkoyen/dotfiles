@@ -208,6 +208,17 @@ defaults write 'com.apple.iCal' 'first minute of day time range' 540
 #defaults write com.apple.Mail DisableReplyAnimations -bool true
 
 
+## Safari
+# → Enable Safari's debug menu
+#defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# Enable the Develop menu and the Web Inspector in Safari
+#defaults write com.apple.Safari IncludeDevelopMenu -bool true
+#defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+#defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+# Add a context menu item for showing the Web Inspector in web views
+#defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+
 ## Some random UX stuff
 # → increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -217,6 +228,8 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # → disable smart dashes as they're annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+# → expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 
 
