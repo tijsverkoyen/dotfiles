@@ -97,6 +97,9 @@ defaults write 'com.apple.airplay' 'showInMenuBarIfPresent' -bool false
 ## System Preferences → Keyboard
 # → Keyboard → Use F1, F2, ... → true
 defaults write 'com.apple.keyboard.fnState' -boolean true
+# → Shortcuts → Full Keyboard Access... → All Controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
 
 ## System Preferences → Trackpad
 # → Point & Click → Tap to click → true
