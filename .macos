@@ -175,13 +175,15 @@ chflags nohidden $HOME/Library
 # → show hidden files
 defaults write 'com.apple.finder' 'AppleShowAllFiles' -bool true
 
+
 ## Terminal → Preferences
 # → General → On startup, open → Tijs
 defaults write 'com.apple.terminal' 'Default Window Settings' -string "Tijs"
-defaults write 'com.apple.terminal' 'DefaultProfilesVersion' -int 1
-
+defaults write 'com.apple.terminal' 'Startup Window Settings' -string "Tijs"
 # → Encodings
 defaults write 'com.apple.terminal' 'StringEncodings' -array 4
+# → Disable Marks, see http://apple.stackexchange.com/questions/209635/what-functionality-do-marks-offer-in-the-el-capitan-terminal
+defaults write 'com.apple.terminal' 'DefaultProfilesVersion' -int 1
 
 
 ## Dock
