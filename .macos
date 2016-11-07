@@ -200,12 +200,27 @@ defaults write 'com.apple.iCal' "first day of week" -int 1
 defaults write 'com.apple.iCal' 'first minute of day time range' 540
 
 
-## Mail
-# → Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-#defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-# → Disable send and reply animations
-#defaults write com.apple.Mail DisableSendAnimations -bool true
-#defaults write com.apple.Mail DisableReplyAnimations -bool true
+## Mail → Preferences
+# → General → New messages sound → None
+defaults write 'com.apple.mail' 'NewMessagesSoundName' -string ""
+# → General → Play sounds for other mail actions → false
+defaults write 'com.apple.mail' 'PlayMailSounds' -int 0
+# → General → Dock unread count → All Mailboxes
+defaults write 'com.apple.mail' 'MailDockBadge' -int 2
+# → General → New message notifications → VIPs
+defaults write 'com.apple.mail' 'MailUserNotificationScope' -int 2
+# → Viewing → List preview → 1 Line
+defaults write 'com.apple.mail' 'NumberOfSnippetLines' -int 1
+# → Viewing → Show most recent message at the top → true
+defaults write 'com.apple.mail' 'ConversationViewSortDescending' -int 1
+# → Composing → Composing → Message Format → Plain Text
+defaults write 'com.apple.mail' 'SendFormat' -string "Plain"
+# → Composing → Responding → When quoting text in replies or forwards → Include all of the original message text
+defaults write 'com.apple.mail' 'AlwaysIncludeOriginalMessage' -int 1
+
+## Mail → Other settings
+# → Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>`
+defaults write 'com.apple.mail' 'AddressesIncludeNameOnPasteboard' -bool false
 
 
 ## Safari
