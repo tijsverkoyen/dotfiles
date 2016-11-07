@@ -8,10 +8,16 @@ tap 'homebrew/php'
 brew 'zsh'
 brew 'zsh-completions'
 
+
 # Install Binaries
+brew 'composer'
+brew 'curl'
 brew 'git'
-brew 'mas'
 brew 'mackup'
+brew 'mas'
+brew 'pow'
+brew 'ruby'
+
 
 # Install Apps
 cask 'cleanmymac'
