@@ -17,6 +17,7 @@ brew 'keybase'
 brew 'mackup'
 brew 'mas'
 brew 'pow'
+brew 'rbenv'
 brew 'ruby'
 
 
