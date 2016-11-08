@@ -27,7 +27,6 @@ cask 'cleanmymac'
 cask 'dropbox'
 cask 'google-chrome'
 cask 'google-drive'
-cask 'ocrkit'
 cask 'phpstorm'
 cask 'prey'
 cask 'sequel-pro'
@@ -42,3 +41,4 @@ cask 'transmit'
 
 # Install Mac Store Apps
 mas '1Password', id: 443987910
+mas 'OCRKit', id: 410309628
