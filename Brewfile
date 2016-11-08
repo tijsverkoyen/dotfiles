@@ -41,4 +41,9 @@ cask 'transmit'
 
 # Install Mac Store Apps
 mas '1Password', id: 443987910
+mas 'Active Collab Timer', id: 1005615923
+mas 'BetterSnapTool', id: 417375580
+mas 'Keynote', id: 409183694
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
 mas 'OCRKit', id: 410309628
