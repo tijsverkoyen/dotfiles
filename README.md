@@ -54,10 +54,4 @@
 
 # @todo
 
-mail.app -> plain text
-signatures ...
-
-keybase
-prey
-
 brew mysql-client only
