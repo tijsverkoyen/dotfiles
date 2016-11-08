@@ -1,8 +1,0 @@
-#!/bin/bash
-#
-# This script will install Oh My Zshell
-#
-# @version	1.0.0
-# @author	Tijs Verkoyen <tijs@sumocoders.be>
-# install zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh

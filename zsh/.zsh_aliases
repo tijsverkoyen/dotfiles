@@ -1,4 +1,9 @@
-alias ls="ls -ahGl"
-alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy" 	# copy public sshkey to the clipboard
-alias phpnodebug="php -n"
+# improve LS
+# -a    include directories starting with a dot
+# -h    make the sizes human readable
+# -l    list in long format
+# -G    colors++
+alias ls="ls -ahlG"
+
+# simplify upgrading our system
 alias upgrade="upgrade_oh_my_zsh; brew update; brew upgrade; brew cleanup;"

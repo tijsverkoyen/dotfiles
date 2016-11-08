@@ -1,0 +1,259 @@
+#!/usr/bin/env bash
+
+# Thanks to Mathias Bynens! https://mths.be/macos
+# Thanks to Dries Vints
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
+## System Preferences → General
+# → Use dark menu bar and Dock → true
+defaults write -g 'AppleInterfaceStyle' -string 'Dark'
+# → Sidebar icon size → medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+
+
+## System Preferences → Desktop & Screen Saver
+# → Screen Saver → Flurry
+defaults write 'com.apple.screensaver' moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0
+
+
+## System Preferences → Dock
+# → Size → 48
+defaults write 'com.apple.dock' 'tilesize' -int 48
+# → Magnification → off & 64
+defaults write 'com.apple.dock' 'magnification' -bool true
+defaults write 'com.apple.dock' 'largesize' -int 64
+# → Minimize windows using → Scale effect
+defaults write 'com.apple.dock' 'mineffect' -string 'scale'
+# → Show indicators for open applications → false
+defaults write com.apple.dock show-process-indicators -bool false
+
+
+## System Preferences → Mision Control
+# → Automatically rearrange Spaces based on most recent use → false
+defaults write 'com.apple.dock' 'mru-spaces' -bool false
+# → Display have separate Spaces → false
+defaults write 'com.apple.dock' 'spans-displays' -bool false
+# → Dashboard → false
+defaults write 'com.apple.dashboard' 'mcx-disabled' -bool true
+# → Don’t show Dashboard as a Space
+defaults write 'com.apple.dock' 'dashboard-in-overlay' -bool true
+
+
+## System Preferences → Mision Control → Hot corners...
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+# → Top left screen corner →
+# defaults write 'com.apple.dock' 'wvous-tl-corner' -int 0
+# defaults write 'com.apple.dock' 'wvous-tl-modifier' -int 0
+# → Top right screen corner → Mission Control
+defaults write 'com.apple.dock' 'wvous-tr-corner' -int 2
+defaults write 'com.apple.dock' 'wvous-tr-modifier' -int 0
+# → Bottom left screen corner →
+# defaults write 'com.apple.dock' 'wvous-bl-corner' -int 5
+# defaults write 'com.apple.dock' 'wvous-bl-modifier' -int 0
+# → Bottom right screen corner → Mission Control
+defaults write 'com.apple.dock' 'wvous-br-corner' -int 2
+defaults write 'com.apple.dock' 'wvous-br-modifier' -int 0
+
+
+## System Preferences → Language & Region
+# → Preferred languages → en, nl
+defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
+# → Region → Belgium
+defaults write NSGlobalDomain AppleLocale -string "en_BE"
+# -> Advanced -> Measurement units
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+
+
+## System Preferences → Security & Privacy
+# → General → Require password → immediately
+defaults write 'com.apple.screensaver' 'askForPassword' -int 1
+defaults write 'com.apple.screensaver' 'askForPasswordDelay' -int 0
+# → Firewall → On	@todo: does this work?
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+
+
+## System Preferences → Displays
+# → Show mirroring options in the menu bar when available → false
+defaults write 'com.apple.airplay' 'showInMenuBarIfPresent' -bool false
+
+
+## System Preferences → Keyboard
+# → Keyboard → Use F1, F2, ... → true
+defaults write 'com.apple.keyboard.fnState' -boolean true
+# → Shortcuts → Full Keyboard Access... → All Controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+
+## System Preferences → Trackpad
+# → Point & Click → Tap to click → true
+defaults write 'com.apple.driver.AppleBluetoothMultitouch.trackpad' 'Clicking' -bool true
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+
+## System Preferences → Sound
+# → Sound Effects → Play user interface sound effects → false
+defaults write 'com.apple.systemsound' 'com.apple.sound.uiaudio.enabled' -int 0
+# → Sound Effects → Play feedback when volume is changed → false
+defaults write 'com.apple.systemsound' 'com.apple.sound.beep.feedback' -int 0
+
+
+## System Preferences → App Store
+# Check for software updates daily, not just once per week
+defaults write 'com.apple.SoftwareUpdate' 'ScheduleFrequency' -int 1
+
+
+## System Preferences → Users & Groups
+# Disable Guest access
+sudo defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool false
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool false
+
+
+## System Preferences → Siri
+defaults write 'com.apple.SiriNCService' 'AppleLanguages' -array "nl-BE"
+defaults write 'com.apple.SiriNCService' 'AppleLocale' -string "nl_BE"
+
+
+## Finder → Preferences
+# → General → Show items on desktop → none
+defaults write 'com.apple.finder' 'ShowHardDrivesOnDesktop' -int 0
+defaults write 'com.apple.finder' 'ShowExternalHardDrivesOnDesktop' -int 0
+defaults write 'com.apple.finder' 'ShowRemovableMediaOnDesktop' -int 0
+defaults write 'com.apple.finder' 'ShowMountedServersOnDesktop' -int 0
+
+# → Sidebar → @todo: check if this can be automated
+
+# → Advanced → Show all filename extenstions → true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# → Advanced → Show warning before changing an extenstion → false
+defaults write 'com.apple.finder' 'FXEnableExtensionChangeWarning' -bool false
+# → Advanced → When performing a search → Search the Current Folder
+defaults write 'com.apple.finder' 'FXDefaultSearchScope' -string "SCcf"
+
+## Finder → Other settings
+# → show path bar
+defaults write 'com.apple.finder' 'ShowPathbar' -bool true
+# → show status bar
+defaults write 'com.apple.finder' 'ShowStatusBar' -bool true
+# → allow text selection in Quick Look
+defaults write 'com.apple.finder' 'QLEnableTextSelection' -bool true
+# → avoid creating .DS_Store files on network volumes
+defaults write 'com.apple.desktopservices' 'DSDontWriteNetworkStores' -bool true
+# → use column view
+# Possible values:
+#  icnv: icons
+#  clmv: columns
+#  Nlsv: list
+#  Flwv: coverflow
+defaults write 'com.apple.finder' 'FXPreferredViewStyle' -string "clmv"
+# → enable snap-to-grid
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" $HOME/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" $HOME/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" $HOME/Library/Preferences/com.apple.finder.plist
+# → expand "General", "Sharing & Permissions" by default
+defaults write 'com.apple.finder' FXInfoPanesExpanded -dict \
+    General -bool true \
+    Privileges -bool true
+# → show the ~/Library folder
+chflags nohidden $HOME/Library
+# → show hidden files
+defaults write 'com.apple.finder' 'AppleShowAllFiles' -bool true
+
+
+## Terminal → Preferences
+# → General → On startup, open → Tijs
+defaults write 'com.apple.terminal' 'Default Window Settings' -string "Tijs"
+defaults write 'com.apple.terminal' 'Startup Window Settings' -string "Tijs"
+# → Encodings
+defaults write 'com.apple.terminal' 'StringEncodings' -array 4
+# → Disable Marks, see http://apple.stackexchange.com/questions/209635/what-functionality-do-marks-offer-in-the-el-capitan-terminal
+defaults write 'com.apple.terminal' 'DefaultProfilesVersion' -int 1
+
+
+## Dock
+# → remove all app icons
+defaults write 'com.apple.dock' 'persistent-apps' -array
+# → show only open applications
+defaults write 'com.apple.dock' 'static-only' -bool true
+
+
+## Calendar → Preferences
+# → General → Start week on → Monday
+defaults write 'com.apple.iCal' "first day of week" -int 1
+# → General → Day starts at → 09:00
+defaults write 'com.apple.iCal' 'first minute of day time range' 540
+
+
+## Mail → Preferences
+# → General → New messages sound → None
+defaults write 'com.apple.mail' 'NewMessagesSoundName' -string ""
+# → General → Play sounds for other mail actions → false
+defaults write 'com.apple.mail' 'PlayMailSounds' -int 0
+# → General → Dock unread count → All Mailboxes
+defaults write 'com.apple.mail' 'MailDockBadge' -int 2
+# → General → New message notifications → VIPs
+defaults write 'com.apple.mail' 'MailUserNotificationScope' -int 2
+# → Viewing → List preview → 1 Line
+defaults write 'com.apple.mail' 'NumberOfSnippetLines' -int 1
+# → Viewing → Show most recent message at the top → true
+defaults write 'com.apple.mail' 'ConversationViewSortDescending' -int 1
+# → Composing → Composing → Message Format → Plain Text
+defaults write 'com.apple.mail' 'SendFormat' -string "Plain"
+# → Composing → Responding → When quoting text in replies or forwards → Include all of the original message text
+defaults write 'com.apple.mail' 'AlwaysIncludeOriginalMessage' -int 1
+
+## Mail → Other settings
+# → Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>`
+defaults write 'com.apple.mail' 'AddressesIncludeNameOnPasteboard' -bool false
+
+
+## Safari
+# → Enable Safari's debug menu
+#defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# Enable the Develop menu and the Web Inspector in Safari
+#defaults write com.apple.Safari IncludeDevelopMenu -bool true
+#defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+#defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+# Add a context menu item for showing the Web Inspector in web views
+#defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+
+## Some random UX stuff
+# → increase window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+# → disable "Are you sure you want to open this application?" dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+# → disable smart quotes as they're annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+# → disable smart dashes as they're annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+# → expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+
+
+## Kill affected applications                                                  #
+for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+    "Dock" "Finder" "Mail" "Messages" "Photos" "Safari" "SystemUIServer" \
+    "Terminal" "iCal"; do
+    killall "${app}" &> /dev/null
+done
+
+echo "🍺 Done, please reboot."
+
