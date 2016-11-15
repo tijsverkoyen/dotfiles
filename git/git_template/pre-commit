@@ -3,8 +3,9 @@
 # This script will pass all our added, copied, modified or renamed files to the
 # some commands, which will check them and report back errors
 #
-# @version	0.0.1
+# @version	0.0.2
 # @author	Tijs Verkoyen <tijs@sumocoders.be>
+# @author	Wouter Sioen <wouter@sumocoders.be>
 
 # initialize vars
 errors=false
@@ -17,9 +18,6 @@ else
     # Initial commit: diff against an empty tree object
     against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
 fi
-
-# Stash changes, we only want to check what's really in the commit
-git stash -q --keep-index
 
 # fetch all changed files
 files=$(git diff-index --name-only --diff-filter=ACMR $against)
@@ -44,13 +42,10 @@ if [ -n "$files" ]; then
     fi
 fi
 
-# Let's pop our stash. We don't want to lose anything
-git stash pop -q
-
 # if we have errors, exit with 1
 if [ $errors = true ]
 then
     echo ""
-    echo "If you are sure you want to commit those files, use --no-verify option"
+    echo "If you are sure you want to commit those files, use --no-verify (-n) option."
     exit 1
 fi
