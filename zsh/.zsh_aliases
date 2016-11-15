@@ -6,4 +6,4 @@
 alias ls="ls -ahlG"
 
 # simplify upgrading our system
-alias upgrade="upgrade_oh_my_zsh; brew update; brew upgrade; brew cleanup;"
+alias upgrade="upgrade_oh_my_zsh && brew update && brew upgrade && brew cleanup"
