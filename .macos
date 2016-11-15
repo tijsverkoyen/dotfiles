@@ -183,7 +183,7 @@ defaults write 'com.apple.terminal' 'Startup Window Settings' -string "Tijs"
 # → Encodings
 defaults write 'com.apple.terminal' 'StringEncodings' -array 4
 # → Disable Marks, see http://apple.stackexchange.com/questions/209635/what-functionality-do-marks-offer-in-the-el-capitan-terminal
-defaults write 'com.apple.terminal' 'DefaultProfilesVersion' -int 1
+defaults write 'com.apple.Terminal' 'AutoMarkPromptLines' -int 0
 
 
 ## Dock
