@@ -19,6 +19,7 @@ brew 'mas'
 brew 'pow'
 brew 'rbenv'
 brew 'ruby'
+brew 'tag'
 
 
 # Install Apps
