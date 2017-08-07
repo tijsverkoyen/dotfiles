@@ -1,0 +1,43 @@
+#! /bin/bash
+#
+# This script will pass all our added, copied, modified or renamed files to our
+# sumo hooks:check command, which will check them and report back errors
+#
+# @version    1.0.0
+# @author    Tijs Verkoyen <tijs@sumocoders.be>
+
+# Check if we're on a semi-secret empty tree
+if git rev-parse --verify HEAD
+then
+    against=HEAD
+else
+    # Initial commit: diff against an empty tree object
+    against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+fi
+
+# Fetch all changed files
+files=$(git diff-index --name-only --diff-filter=ACMR $against)
+
+if [ -n "$files" ]; then
+    currentPath=$(pwd)
+    paths=()
+
+    # Gather all the files
+    for file in $files
+    do
+        paths+=($currentPath/$file)
+    done
+
+    # Run our sumo hook:check command
+    output=$(script -q /dev/null sumo hooks:check ${paths[@]})
+    echo -e "$output"
+
+    # If there are errors output a tip on how to commit with the errors
+    if [[ $output =~ .*ERROR.* ]]
+    then
+        printf "\e[43m% 80s\e[0m\n"
+        printf "\e[43m\e[30m [TIP] If you are sure you want to commit those files, use --no-verify (-n).    \e[0m\n"
+        printf "\e[43m% 80s\e[0m\n"
+        exit 1
+    fi
+fi
