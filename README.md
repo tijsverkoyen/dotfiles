@@ -2,9 +2,8 @@
 
 ## Clean install
 
-* Update macOS to the latest version with the App Store
-* Install Xcode from the App Store, open it and accept the license agreement
-* Install macOS Command Line Tools by running `xcode-select --install`
+* Update macOS to the latest version thru the App Store
+* Set the computer name (System Preferences -> Sharing)
 
 ### ssh-stuff
 
@@ -17,9 +16,6 @@
     git clone https://tijsverkoyen@github.com/tijsverkoyen/dotfiles.git
     cd ~/dotfiles
 
-### computer name
-
-* Set the computer name
 
 ### Terminal.app
 
@@ -34,24 +30,3 @@
 ### Reboot
 
 * Restart your computer to finalize the process
-
-
-
-# Extra's for my Mac mini
-
-    brew cask install couchpotato
-    brew cask install logitech-myharmony
-    brew cask install plex-media-server
-    brew cask install plex-home-theater
-    brew cask install sonarr
-    brew cask install utorrent
-
-
-## Manual installs
-
-* [Promise Utility](http://www.promise.com/us/Support)
-
-
-# @todo
-
-brew mysql-client only
