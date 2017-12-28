@@ -15,11 +15,6 @@ brew tap homebrew/bundle
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
-# Install some gems
-for gem in "bundler" "sumodev" ; do
-    gem install "${gem}"
-done
-
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
