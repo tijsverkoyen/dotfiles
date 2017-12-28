@@ -8,7 +8,6 @@
 ### ssh-stuff
 
 * Copy public and private SSH keys to `~/.ssh`
-* Append `/usr/local/bin/zsh` to the end of your `/etc/shells` file
 
 ### Clone the repo
 
@@ -17,9 +16,11 @@
     cd ~/dotfiles
 
 
-### Terminal.app
+### Import the terminal theme
 
-* Import the terminal theme
+1. Open Terminal.app
+2. Open Preferences
+3. Import the theme ~/dotfiles/Terminal.app/Tijs.theme
 
 ### Install all
 
