@@ -20,6 +20,7 @@ brew 'rbenv'
 brew 'ruby'
 brew 'tag'
 brew 'yarn'
+brew 'docker-compose'
 
 
 # Install Apps
