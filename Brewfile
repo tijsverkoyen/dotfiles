@@ -21,6 +21,7 @@ brew 'ruby'
 brew 'tag'
 brew 'yarn'
 brew 'docker-compose'
+brew 'mysql'
 
 
 # Install Apps
