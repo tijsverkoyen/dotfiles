@@ -43,6 +43,6 @@ cask 'transmit'
 
 
 # Install Mac Store Apps
-mas '1Password', id: 443987910
+mas '1Password 7 - Password Manager', id: 1333542190
 mas 'BetterSnapTool', id: 417375580
 mas 'OCRKit', id: 410309628
