@@ -1,7 +1,5 @@
 # Taps
 tap 'caskroom/cask'
-tap 'homebrew/dupes'
-tap 'homebrew/php'
 
 
 # Install ZSH
@@ -15,13 +13,12 @@ brew 'curl'
 brew 'git'
 brew 'mackup'
 brew 'mas'
-brew 'pow'
 brew 'rbenv'
 brew 'ruby'
-brew 'tag'
-brew 'yarn'
-brew 'docker-compose'
+brew 'npm'
+brew 'nvm'
 brew 'mysql'
+brew 'tag'
 
 
 # Install Apps
