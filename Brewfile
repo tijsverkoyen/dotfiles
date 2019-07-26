@@ -38,6 +38,7 @@ cask 'the-unarchiver'
 cask 'transmit'
 cask 'docker'
 cask 'postman'
+cask 'sketch'
 
 
 # Install Mac Store Apps
