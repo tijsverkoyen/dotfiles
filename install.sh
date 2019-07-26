@@ -6,6 +6,9 @@ if test ! $(which brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+echo "⚠️ You should install Prey manually, go to https://preyproject.com"
+read -p "Continue? press enter"
+
 # Update Homebrew recipes
 brew update
 
