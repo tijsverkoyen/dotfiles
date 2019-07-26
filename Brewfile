@@ -37,6 +37,7 @@ cask 'textmate'
 cask 'the-unarchiver'
 cask 'transmit'
 cask 'docker'
+cask 'postman'
 
 
 # Install Mac Store Apps
