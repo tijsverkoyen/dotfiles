@@ -1,7 +1,5 @@
 # Taps
 tap 'caskroom/cask'
-tap 'homebrew/dupes'
-tap 'homebrew/php'
 
 
 # Install ZSH
@@ -15,13 +13,12 @@ brew 'curl'
 brew 'git'
 brew 'mackup'
 brew 'mas'
-brew 'pow'
 brew 'rbenv'
 brew 'ruby'
-brew 'tag'
-brew 'yarn'
-brew 'docker-compose'
+brew 'npm'
+brew 'nvm'
 brew 'mysql'
+brew 'tag'
 
 
 # Install Apps
@@ -31,7 +28,6 @@ cask 'dropbox'
 cask 'google-chrome'
 cask 'google-backup-and-sync'
 cask 'phpstorm'
-cask 'prey'
 cask 'sequel-pro'
 cask 'skitch'
 cask 'skype'
@@ -43,7 +39,6 @@ cask 'transmit'
 
 
 # Install Mac Store Apps
-mas '1Password', id: 443987910
-mas 'Active Collab Timer', id: 1005615923
+mas '1Password 7 - Password Manager', id: 1333542190
 mas 'BetterSnapTool', id: 417375580
 mas 'OCRKit', id: 410309628

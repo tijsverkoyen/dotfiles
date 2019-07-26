@@ -11,7 +11,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
 ## System Preferences → General
-# → Use dark menu bar and Dock → true
+# → Appearance: Dark
 defaults write -g 'AppleInterfaceStyle' -string 'Dark'
 # → Sidebar icon size → medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
@@ -112,9 +112,14 @@ defaults write 'com.apple.systemsound' 'com.apple.sound.uiaudio.enabled' -int 0
 defaults write 'com.apple.systemsound' 'com.apple.sound.beep.feedback' -int 0
 
 
-## System Preferences → App Store
+## System Preferences → Software Update
 # Check for software updates daily, not just once per week
 defaults write 'com.apple.SoftwareUpdate' 'ScheduleFrequency' -int 1
+
+
+## System Preferences → Bluetooth
+# → Show Bluetooth in menu bar → true
+# I can't find anything for this, so add it tho the menu manually :-(
 
 
 ## System Preferences → Users & Groups
@@ -128,6 +133,12 @@ defaults write 'com.apple.SiriNCService' 'AppleLanguages' -array "nl-BE"
 defaults write 'com.apple.SiriNCService' 'AppleLocale' -string "nl_BE"
 
 
+## System Preferences → Date & Time
+# → Clock → Show date → true
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
+
+
+
 ## Finder → Preferences
 # → General → Show items on desktop → none
 defaults write 'com.apple.finder' 'ShowHardDrivesOnDesktop' -int 0
@@ -135,7 +146,8 @@ defaults write 'com.apple.finder' 'ShowExternalHardDrivesOnDesktop' -int 0
 defaults write 'com.apple.finder' 'ShowRemovableMediaOnDesktop' -int 0
 defaults write 'com.apple.finder' 'ShowMountedServersOnDesktop' -int 0
 
-# → Sidebar → @todo: check if this can be automated
+# → Sidebar →
+# @todo: check if this can be automated
 
 # → Advanced → Show all filename extenstions → true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -237,7 +249,6 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # → expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-
 
 
 ## Kill affected applications                                                  #
