@@ -36,6 +36,7 @@ cask 'spotify'
 cask 'textmate'
 cask 'the-unarchiver'
 cask 'transmit'
+cask 'docker'
 
 
 # Install Mac Store Apps
