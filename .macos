@@ -133,6 +133,12 @@ defaults write 'com.apple.SiriNCService' 'AppleLanguages' -array "nl-BE"
 defaults write 'com.apple.SiriNCService' 'AppleLocale' -string "nl_BE"
 
 
+## System Preferences → Date & Time
+# → Clock → Show date → true
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
+
+
+
 ## Finder → Preferences
 # → General → Show items on desktop → none
 defaults write 'com.apple.finder' 'ShowHardDrivesOnDesktop' -int 0
