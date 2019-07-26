@@ -19,6 +19,9 @@ brew bundle
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
+# Add the oh-my-zsh theme we want to use in the themes folder thru a link
+ln -s ~/dotfiles/zsh/tijs.zsh-theme ~/.oh-my-zsh/themes/tijs.zsh-theme
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
