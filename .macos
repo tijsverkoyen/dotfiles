@@ -146,7 +146,8 @@ defaults write 'com.apple.finder' 'ShowExternalHardDrivesOnDesktop' -int 0
 defaults write 'com.apple.finder' 'ShowRemovableMediaOnDesktop' -int 0
 defaults write 'com.apple.finder' 'ShowMountedServersOnDesktop' -int 0
 
-# → Sidebar → @todo: check if this can be automated
+# → Sidebar →
+# @todo: check if this can be automated
 
 # → Advanced → Show all filename extenstions → true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
