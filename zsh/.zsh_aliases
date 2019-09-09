@@ -20,3 +20,6 @@ alias dss="docker-sync-stack"
 
 # simplyfi to check PHP compatibility
 alias php-check-compatibility="phpcs -spv --colors --standard=PHPCompatibility --extensions=php --ignore=Capfile --ignore=Gemfile --ignore=Procfile --ignore=Sumofile --ignore='*.lock,*.md,*.txt,*.png,*.sql,*.json,*ico' --ignore=vendor --report=full"
+
+# simplify using the Symfony CLI
+alias s="symfony"
