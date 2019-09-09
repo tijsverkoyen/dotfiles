@@ -32,7 +32,8 @@ defaults write 'com.apple.dock' 'largesize' -int 64
 defaults write 'com.apple.dock' 'mineffect' -string 'scale'
 # → Show indicators for open applications → false
 defaults write com.apple.dock show-process-indicators -bool false
-
+# → Show recent application in Dock → false
+defaults write com.apple.dock show-recents -bool false
 
 ## System Preferences → Mision Control
 # → Automatically rearrange Spaces based on most recent use → false
