@@ -9,6 +9,8 @@ CURRENTDIR=$(pwd)
 curl -sS https://get.symfony.com/cli/installer | bash
 # → Enabling TLS
 symfony server:ca:install
+# → Install Xdebug thru pecl
+pecl install xdebug
 
 # SumoCoders
 # → Install needed packages for checking code styles and such
