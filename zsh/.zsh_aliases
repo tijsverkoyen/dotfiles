@@ -6,7 +6,7 @@
 alias ls="ls -ahlG"
 
 # simplify upgrading our system
-alias upgrade="upgrade_oh_my_zsh && brew update && brew upgrade && brew cleanup"
+alias upgrade="omz update && brew update && brew upgrade && brew cleanup"
 
 # some docker shortcuts
 alias docker-stop-all="docker ps -a -q | xargs docker stop"
