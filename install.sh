@@ -3,7 +3,7 @@ echo "Setting up your Mac..."
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 echo "⚠️ You should install Prey manually, go to https://preyproject.com"
@@ -20,6 +20,7 @@ brew bundle
 chsh -s $(which zsh)
 
 # Add the oh-my-zsh theme we want to use in the themes folder thru a link
+mkdir -p  ~/.oh-my-zsh/themes
 ln -s ~/dotfiles/zsh/tijs.zsh-theme ~/.oh-my-zsh/themes/tijs.zsh-theme
 
 # Set macOS preferences
