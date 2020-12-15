@@ -10,13 +10,12 @@ brew 'zsh-completions'
 # Install Binaries
 brew 'composer'
 brew 'curl'
+brew 'fontforge'
 brew 'git'
 brew 'mackup'
 brew 'mas'
-brew 'rbenv'
 brew 'ruby'
 brew 'npm'
-brew 'nvm'
 brew 'mysql'
 brew 'tag'
 
@@ -45,3 +44,5 @@ cask 'sketch'
 mas '1Password 7 - Password Manager', id: 1333542190
 mas 'BetterSnapTool', id: 417375580
 mas 'OCRKit', id: 410309628
+mas 'Telephone', id: 406825478
+mas 'Active Collab Timer', id: 1005615923
