@@ -26,3 +26,6 @@ Thumbs.db
 
 # Symfony console
 *.php~
+
+# Python
+__pycache__
