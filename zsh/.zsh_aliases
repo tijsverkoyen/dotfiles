@@ -24,3 +24,6 @@ alias php-check-compatibility="phpcs -spv --colors --standard=PHPCompatibility -
 # simplify using the Symfony CLI
 alias s="symfony"
 alias c="COMPOSER_MEMORY_LIMIT=-1 composer"
+
+# make it easier to deploy with deployer
+alias dep="symfony php vendor/bin/dep"
