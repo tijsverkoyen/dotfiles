@@ -53,7 +53,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg_bold[red]%}↑%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg_bold[red]%}↓%{$reset_color%}"
 
 prompt_git_status() {
-	GIT_INFO=`git_prompt_info`
+	GIT_INFO=`_omz_git_prompt_info`
 	if [[ "$GIT_INFO" != "" ]]; then
 		GIT_STATUS=`git_prompt_status`
 		
