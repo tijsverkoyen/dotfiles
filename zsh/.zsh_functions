@@ -91,18 +91,6 @@ copy_pwd_to_clipboard() {
 	echo -n $PWD | pbcopy
 }
 
-serialize() {
-	# show usage if there are no arguments
-	if (( $# < 1 ))
-	then
-		echo usage: serialize value
-	else
-		OUTPUT=(`php -r "echo serialize('$1');"`)
-		echo -n $OUTPUT | pbcopy
-		echo $OUTPUT
-	fi
-}
-
 # autocomplete for the functions
 compdef find_project navigate_to_project
 compdef find_project open_project
