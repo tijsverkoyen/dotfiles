@@ -28,3 +28,6 @@ alias composer1='symfony php -d memory_limit=-1 ~/composer/composer1.phar'
 
 # make it easier to deploy with deployer
 alias dep="symfony php vendor/bin/dep"
+
+# tijs command
+alias tijs="$(brew --prefix php@8.1)/bin/php ~/Sites/tijs/command/bin/console --env=prod"
