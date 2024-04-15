@@ -3,7 +3,7 @@
 # This script will pass all our added, copied, modified or renamed files to our
 # sumo hooks:check command, which will check them and report back errors
 #
-# @version    1.0.0
+# @version    1.0.1
 # @author    Tijs Verkoyen <tijs@sumocoders.be>
 
 # Check if we're on a semi-secret empty tree
