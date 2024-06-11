@@ -18,3 +18,9 @@ alias dep="symfony php vendor/bin/dep"
 
 # tijs command
 alias tijs="$(brew --prefix php@8.1)/bin/php ~/Sites/tijs/command/bin/console --env=prod"
+
+# pstorm, as I can't get used to that stupid phpstorm cli thing
+alias pstorm="open -na 'PhpStorm.app' --args "
+
+# pycharm, as I can't get used to the command line launcher
+alias pycharm="open -na "PyCharm.app" --args "
