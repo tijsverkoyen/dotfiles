@@ -1,6 +1,5 @@
 # Taps
 tap "homebrew/bundle"
-tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "shivammathur/extensions"
 tap "shivammathur/php"
@@ -11,6 +10,7 @@ brew 'zsh'
 brew 'zsh-completions'
 
 # Install Binaries
+Brew '1Password'
 brew 'composer'
 brew 'curl'
 brew 'fontforge'
@@ -49,22 +49,30 @@ brew "symfony-cli/tap/symfony-cli"
 # Install Apps
 cask 'cleanmymac'
 cask 'dropbox'
-cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
+cask 'google-drive'
+cask 'microsoft-excel'
+cask 'microsoft-onenote'
+cask 'microsoft-outlook'
+cask 'microsoft-powerpoint'
+cask 'microsoft-teams'
+cask 'microsoft-word'
+cask 'onedrive'
 cask 'orbstack'
 cask 'phpstorm'
 cask "postman"
 cask 'pycharm'
 cask "raycast"
 cask 'sequel-ace'
-cask 'skitch'
 cask 'slack'
 cask 'spotify'
 cask 'textmate'
 cask 'the-unarchiver'
 cask 'transmit'
+cask 'whatsapp'
+
 
 # Install Mac Store Apps
-mas 'OCRKit', id: 410309628
 mas 'Telephone', id: 406825478
+mas '1Blocker - Ad Blocker', id: 1365531024
