@@ -29,6 +29,9 @@ chsh -s $(which zsh)
 mkdir -p  ~/.oh-my-zsh/themes
 ln -s ~/dotfiles/zsh/tijs.zsh-theme ~/.oh-my-zsh/themes/tijs.zsh-theme
 
+# Allow Touch ID for sudo
+sudo sed -i '.bak' '1s/^/auth       sufficient     pam_tid.so\'$'\n/g' /etc/pam.d/sudo
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
