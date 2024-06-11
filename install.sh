@@ -19,6 +19,9 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# Install Symfony certificate
+symfony server:ca:install
+
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
