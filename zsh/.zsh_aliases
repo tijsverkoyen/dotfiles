@@ -8,19 +8,6 @@ alias ls="ls -ahlG"
 # simplify upgrading our system
 alias upgrade="omz update; brew update && brew upgrade && brew cleanup"
 
-# some docker shortcuts
-alias docker-stop-all="docker ps -a -q | xargs docker stop"
-alias docker-remove-all="docker ps -a -q | xargs docker rm"
-alias docker-stop-remove-all="docker-stop-all && docker-remove-all"
-alias docker-cmd="docker-compose run --user www-data:www-data"
-alias dc="docker-cmd"
-
-# some docker-sync shortcuts
-alias dss="docker-sync-stack"
-
-# simplyfi to check PHP compatibility
-alias php-check-compatibility="phpcs -spv --colors --standard=PHPCompatibility --extensions=php --ignore=Capfile --ignore=Gemfile --ignore=Procfile --ignore=Sumofile --ignore='*.lock,*.md,*.txt,*.png,*.sql,*.json,*ico' --ignore=vendor --report=full"
-
 # simplify using the Symfony CLI
 alias s="symfony"
 alias c="COMPOSER_MEMORY_LIMIT=-1 composer"
