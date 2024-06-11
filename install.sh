@@ -6,6 +6,9 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/tijs/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 echo "⚠️ You should install Prey manually, go to https://preyproject.com"
 read -p "Continue? press enter"
 
