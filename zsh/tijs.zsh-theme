@@ -2,7 +2,6 @@
 
 # You should use http://color.smyck.org/
 
-DEFAULT_USER="tijs"
 PROMPT='$(prompt_status)$(prompt_context):$(prompt_current_path)$(prompt_git_status) → '
 
 ## Internal methods
@@ -18,20 +17,8 @@ prompt_status() {
 	fi
 }
 
-# Show which user you are
-# If you are another user it will be shown. If you are root it will show it in red, otherwise it will be green.
+# Show hostname
 prompt_context() {
-	local user=`whoami`
-	if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CONNECTION" ]]; then
-		if [[ $UID -eq 0 ]]; then
-			print -n "%{$fg[red]%}⚡$user"
-		else
-			print -n "%{$fg[green]%}$user"			
-		fi
-		
-		print -n "@%{$reset_color%}"
-    fi 
-	
 	print -n "%{$fg[green]%}%m%{$reset_color%}"
 }
 
