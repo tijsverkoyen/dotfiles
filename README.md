@@ -21,6 +21,7 @@
 1. Open Terminal.app
 2. Open Preferences
 3. Import the theme ~/dotfiles/Terminal.app/Tijs.theme
+4. Make the theme the default
 
 ### Install all
 
