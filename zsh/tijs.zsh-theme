@@ -49,14 +49,14 @@ ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[red]%}●%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_bold[green]%}●%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg_bold[red]%}↑%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg_bold[red]%}↓%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE="%{$fg_bold[red]%}↑%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="%{$fg_bold[red]%}↓%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="%{$fg_bold[red]%}↑↓%{$reset_color%}"
 
 prompt_git_status() {
-	GIT_INFO=`_omz_git_prompt_info`
+	local GIT_INFO=$(_omz_git_prompt_info)
 	if [[ "$GIT_INFO" != "" ]]; then
-		GIT_STATUS=`git_prompt_status`
-		
+		GIT_STATUS=$(git_remote_status)
 		print -n "%{$fg[blue]%}($GIT_INFO%{$reset_color%}$GIT_STATUS%{$fg[blue]%})%{$reset_color%}"
 	fi
 }
