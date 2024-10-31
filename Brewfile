@@ -18,8 +18,7 @@ brew 'git'
 brew "jsonpp"
 brew 'mackup'
 brew 'mas'
-brew 'mysql'
-brew "mysql-client@5.7"
+brew 'mariadb'
 brew 'npm'
 brew 'ruby'
 brew 'tag'
