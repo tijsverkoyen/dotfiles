@@ -10,7 +10,7 @@ brew 'zsh'
 brew 'zsh-completions'
 
 # Install Binaries
-Brew '1Password'
+brew '1password'
 brew 'composer'
 brew 'curl'
 brew 'fontforge'
