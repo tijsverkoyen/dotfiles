@@ -10,8 +10,8 @@ alias upgrade="omz update; brew update && brew upgrade && brew cleanup"
 
 # simplify using the Symfony CLI
 alias s="symfony"
-alias c="COMPOSER_MEMORY_LIMIT=-1 composer"
-alias composer1='symfony php -d memory_limit=-1 ~/composer/composer1.phar'
+alias comp="symfony php -d memory_limit=-1 COMPOSER_MEMORY_LIMIT=-1 composer"
+alias comp1="symfony php -d memory_limit=-1 ~/composer/composer1.phar"
 
 # make it easier to deploy with deployer
 alias dep="symfony php vendor/bin/dep"
