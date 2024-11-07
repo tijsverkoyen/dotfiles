@@ -1,0 +1,47 @@
+# ZSH config
+export ZSH=$HOME/.oh-my-zsh
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
+# Set editor
+# export VISUAL="mate -w"
+# export EDITOR="mate -w"
+
+# Set custom theme
+export ZSH_THEME="tijs"
+
+# Load plugins
+plugins=(
+  docker 
+  git 
+  jsontools 
+  npm
+)
+
+# Source other files
+source $ZSH/oh-my-zsh.sh
+source $HOME/dotfiles/zsh/.zsh_aliases
+source $HOME/dotfiles/zsh/.zsh_functions
+
+# Set language environment
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Load custom commands
+export PATH="$HOME/dotfiles/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# GitHub token for homebrew
+export HOMEBREW_GITHUB_API_TOKEN="{{ onepasswordRead "op://Employee/github.com/HOMEBREW_GITHUB_API_TOKEN" }}"
+
+# Volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# rbenv
+eval "$(rbenv init - zsh)"
+
+# Symfony CLI autocomplation
+eval "$(symfony self:completion zsh)"
+
+# Brew
+export HOMEBREW_NO_ENV_HINTS=1
