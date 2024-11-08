@@ -1,0 +1,32 @@
+[user]
+	name = Tijs Verkoyen
+	email = tijs@verkoyen.eu
+	logallrefupdates=true
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+[core]
+	excludesfile = ~/dotfiles/git/.gitignore
+[branch]
+	autosetuprebase = always
+[init]
+	templatedir = ~/dotfiles/git/git_template
+	defaultBranch = master
+[push]
+	default = simple
+	autoSetupRemote = true
+[credential]
+	helper = osxkeychain
+[transfer] 
+  fsckobjects = true
+[fetch] 
+	fsckobjects = false 
+[receive] 
+  fsckObjects = true 
