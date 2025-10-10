@@ -2,3 +2,7 @@
 user = {{ onepasswordRead "op://Private/.my.cnf/username" }}
 password = {{ onepasswordRead "op://Private/.my.cnf/password" }}
 host = 127.0.0.1
+
+[mysqld]
+character-set-server=utf8mb4
+ignore-db-dir='.my.cnf'
