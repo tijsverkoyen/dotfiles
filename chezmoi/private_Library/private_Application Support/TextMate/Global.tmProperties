@@ -1,0 +1,39 @@
+# Version 1.0 -- Generated content!
+showInvisibles   = true
+softTabs         = true
+softWrap         = true
+tabSize          = 2
+
+[ *.csv ]
+fileType         = text.plain
+
+[ source ]
+softTabs         = true
+softWrap         = false
+
+[ source.sql ]
+softWrap         = false
+
+[ source.yaml ]
+softTabs         = true
+
+[ text ]
+showInvisibles   = true
+tabSize          = 2
+
+[ text.html ]
+tabSize          = 2
+
+[ text.html.markdown ]
+tabSize          = 2
+
+[ text.plain ]
+showInvisibles   = true
+softWrap         = true
+
+[ text.tabular ]
+softWrap         = false
+
+[ text.tabular.csv ]
+softWrap         = false
+
