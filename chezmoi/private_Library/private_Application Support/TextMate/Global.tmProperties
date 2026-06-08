@@ -4,8 +4,11 @@ softTabs         = true
 softWrap         = true
 tabSize          = 2
 
+[ *.be ]
+fileType         = text.html.markdown
+
 [ *.csv ]
-fileType         = text.plain
+fileType         = text.tabular.csv
 
 [ source ]
 softTabs         = true
@@ -22,9 +25,14 @@ showInvisibles   = true
 tabSize          = 2
 
 [ text.html ]
+softWrap         = true
 tabSize          = 2
 
+[ text.html.basic ]
+softWrap         = false
+
 [ text.html.markdown ]
+softWrap         = true
 tabSize          = 2
 
 [ text.plain ]
@@ -36,4 +44,3 @@ softWrap         = false
 
 [ text.tabular.csv ]
 softWrap         = false
-
