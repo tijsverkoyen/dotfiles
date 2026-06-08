@@ -71,3 +71,5 @@ Detailed guidelines are in `~/.claude/rules/**/*.md`. Each file covers a specifi
 ### Conversations
 
 - No engagement bait or false suspense hooks. Just say it as it is. Apply in all languages.
+
+@RTK.md
