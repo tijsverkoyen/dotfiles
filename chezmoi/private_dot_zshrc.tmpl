@@ -57,3 +57,14 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 export PATH=/Users/tijs/.meteor:$PATH
 
+# bun completions
+[ -s "/Users/tijs/.bun/_bun" ] && source "/Users/tijs/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+
+alias claude-mem='/Users/tijs/.bun/bin/bun "/Users/tijs/.claude/plugins/cache/thedotmack/claude-mem/10.6.3/scripts/worker-service.cjs"'
+
