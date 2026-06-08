@@ -1,0 +1,61 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/tijs/.claude/hooks/context-mode-cache-heal.mjs\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "symfony-ux@symfony-ux": true,
+    "sumo@sumocoders": true,
+    "context-mode@context-mode": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "claude-mem@thedotmack": true
+  },
+  "extraKnownMarketplaces": {
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
+    },
+    "symfony-ux": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/tijs/Sites/tijsverkoyen/symfony-ux-skills"
+      }
+    },
+    "sumocoders": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/tijs/Sites/sumocoders/claude-plugin"
+      },
+      "autoUpdate": true
+    },
+    "context-mode": {
+      "source": {
+        "source": "github",
+        "repo": "mksglu/context-mode"
+      }
+    }
+  },
+  "preferredNotifChannel": "terminal_bell",
+  "skipAutoPermissionPrompt": true
+}
