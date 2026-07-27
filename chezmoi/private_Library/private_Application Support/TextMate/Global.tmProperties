@@ -10,6 +10,9 @@ fileType         = text.html.markdown
 [ *.csv ]
 fileType         = text.tabular.csv
 
+[ *.jsonc ]
+fileType         = source.json
+
 [ source ]
 softTabs         = true
 softWrap         = false
