@@ -1,6 +1,4 @@
 # Taps
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "shivammathur/extensions"
 tap "shivammathur/php"
 tap "symfony-cli/tap"
@@ -10,7 +8,9 @@ brew 'zsh'
 brew 'zsh-completions'
 
 # Install Binaries
+brew 'age'
 brew '1password'
+brew 'chezmoi'
 brew 'composer'
 brew 'curl'
 brew 'fontforge'
@@ -21,6 +21,7 @@ brew 'mas'
 brew 'mariadb'
 brew 'npm'
 brew 'ruby'
+brew 'rbenv'
 brew 'tag'
 brew "volta"
 brew "wget"
@@ -41,9 +42,8 @@ brew "shivammathur/php/php@8.0"
 brew "shivammathur/php/php@8.1"
 brew "shivammathur/php/php@8.2"
 brew "shivammathur/php/php@8.3"
+brew "shivammathur/php/php@8.4"
 brew "symfony-cli/tap/symfony-cli"
-
-
 
 # Install Apps
 cask 'cleanmymac'

@@ -24,3 +24,8 @@ alias pstorm="open -na 'PhpStorm.app' --args "
 
 # pycharm, as I can't get used to the command line launcher
 alias pycharm="open -na "PyCharm.app" --args "
+
+# standardjs via docker
+alias standardjs="docker run --volume ./:/code sumocoders/standardjs:latest --ignore=assets/vendor --ignore=public/bundles/ --ignore=public/assets"
+# stylelint via docker
+alias stylelint="docker run --volume ./:/code sumocoders/stylelint:latest --allow-empty-input"

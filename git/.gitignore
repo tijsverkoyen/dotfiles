@@ -29,3 +29,6 @@ Thumbs.db
 
 # Python
 __pycache__
+
+# AI
+.claude

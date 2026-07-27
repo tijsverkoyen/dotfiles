@@ -9,6 +9,39 @@
 
 * Copy public and private SSH keys to `~/.ssh`
 
+### Chezmoi
+
+* Create a file `~/.config/age/key.txt` with the content below:
+
+```
+# created: 2024-11-08T11:05:19+01:00
+# public key: XAGEPUBLICKEYX
+AGE-SECRET-KEY-YAGESECRETY
+```
+
+Replace `XAGEPUBLICKEYX` and `YAGESECRETY` with the correct values, see 1Password.
+
+* Create a file `~/.config/chezmoi/chezmoi.json` with the content below:
+
+```json
+{
+  "encryption": "age",
+  "age": {
+    "identity": "/Users/tijs/.config/age/key.txt",
+    "recipient": "XAGEPUBLICKEYX"
+  },
+  "data": {
+    "name": {
+      "full": "Tijs Verkoyen"
+    }
+  }
+}
+```
+
+* `chezmoi init git@github.com:tijsverkoyen/dotfiles.git`
+* Create a file `~/.local/share/chezmoi/chezmoiroot` with content: `chezmoi`
+* `chezmoi -v update`
+
 ### Clone the repo
 
     cd ~/ 
