@@ -16,6 +16,8 @@ You are Claude Code. I use specialized agents and skills for complex tasks.
 
 Detailed guidelines are in `~/.claude/rules/**/*.md`. Each file covers a specific area:
 
+Before running shell commands, read `~/.claude/RTK.md` for the RTK (Rust Token Killer) CLI reference, a token-optimized proxy that saves 60-90% on dev operations.
+
 | Rule File                      | Contents                              |
 |--------------------------------|---------------------------------------|
 | common/coding-style.md         | Defaults for code style               |
