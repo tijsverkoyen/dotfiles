@@ -68,7 +68,8 @@
 		},
 		"onboarding": {
 			"hasLaunchedBefore": true,
-			"hasSeenWelcomeModal": true
+			"hasSeenWelcomeModal": true,
+			"lastSeenVersion": "4.0.0"
 		},
 		"general": {
 			"defaultLocation": "/Users/tijs/Documents/bruno",
@@ -84,6 +85,36 @@
 		"cache": {
 			"sslSession": {
 				"enabled": false
+			},
+			"file": {
+				"enabled": false
+			}
+		},
+		"ai": {
+			"enabled": false,
+			"providers": {
+				"openai": {
+					"enabled": false
+				},
+				"anthropic": {
+					"enabled": false
+				}
+			},
+			"models": {},
+			"defaultModel": "",
+			"openaiCompatibleEndpoints": [],
+			"autocomplete": {
+				"enabled": true,
+				"model": "",
+				"triggerMode": "debounced"
+			},
+			"security": {
+				"redactHeaders": true,
+				"redactBody": true,
+				"redactVariables": true,
+				"redactResponse": true,
+				"customRedactedHeaders": [],
+				"customRedactedVariables": []
 			}
 		},
 		"telemetry": {
@@ -98,8 +129,8 @@
 	"themeMode": "system",
 	"themeBg": "#1a1a1a",
 	"window-bounds": {
-		"x": 0,
-		"y": 100,
+		"x": -548,
+		"y": -1138,
 		"width": 1728,
 		"height": 1007
 	},
