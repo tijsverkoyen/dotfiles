@@ -1,6 +1,12 @@
 model:
-  default: claude-fable-5
-  provider: anthropic
+  default: unsloth/Qwen3.6-27B-GGUF:UD-Q5_K_XL
+  provider: custom
+  base_url: http://localhost:8080/
+fallback_providers:
+  - provider: openrouter
+    model: anthropic/claude-sonnet-4
+  - provider: anthropic
+    model: claude-sonnet-5
 agent:
   max_turns: 60
   verbose: false
@@ -119,6 +125,9 @@ skills:
     - opencode
     - p5js
 timezone: Europe/Brussels
+command_allowlist:
+  - script execution via -e/-c flag
+  - execute_code
 code_execution:
   timeout: 300
   max_tool_calls: 50
@@ -129,6 +138,13 @@ updates:
   backup_keep: 5
   non_interactive_local_changes: stash
 _config_version: 33
+custom_providers:
+  - name: local
+    base_url: http://localhost:8080/v1
+    api_key: null
+  - name: Local (localhost:8080)
+    base_url: http://localhost:8080/
+    model: unsloth/Qwen3.6-27B-GGUF:UD-Q5_K_XL
 session_reset:
   mode: both
   idle_minutes: 1440
