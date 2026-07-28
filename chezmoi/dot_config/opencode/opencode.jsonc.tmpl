@@ -1,8 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "permission": {
-    "*": "ask",
-  },
   "provider": {
     "openrouter": {
       "options": {
@@ -16,11 +13,19 @@
         "baseURL": "http://127.0.0.1:8080/v1"
       },
       "models": {
-        "qwen3-coder:a3b": {
-          "name": "Qwen3-Coder: a3b-30b (local)",
+        "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q5_K_M": 
+        {
+          "name": "Qwen3-Coder 30B A3B Q5_K_M (local)",
           "limit": {
-            "context": 128000,
-            "output": 65536
+            "context": 131072,
+            "output": 32768
+          }
+        },
+        "unsloth/Qwen3.6-27B-GGUF:UD-Q5_K_XL": {
+          "name": "Qwen3.6-27B UD-Q5_K_XL (local)",
+          "limit": {
+            "context": 131072,
+            "output": 32768
           }
         }
       }
