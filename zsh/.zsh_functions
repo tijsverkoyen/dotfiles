@@ -17,3 +17,16 @@ copy_pwd_to_clipboard() {
 }
 # aliases for faster usage
 alias cpwd="copy_pwd_to_clipboard"
+
+# fix the proxy settings to use Symfony proxy
+fix-proxy() {
+  local pac_url="http://127.0.0.1:7080/proxy.pac"
+
+  sudo networksetup -setautoproxyurl "Wi-Fi" "$pac_url"
+  sudo networksetup -setautoproxystate "Wi-Fi" on
+
+  sudo networksetup -setautoproxyurl "VPN SumoCoders" "$pac_url"
+  sudo networksetup -setautoproxystate "VPN SumoCoders" on
+
+  echo "Proxy PAC set to $pac_url on Wi-Fi and VPN SumoCoders"
+}
