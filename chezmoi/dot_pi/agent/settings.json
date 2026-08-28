@@ -1,6 +1,9 @@
 {
+  "collapseChangelog": true,
   "defaultProvider": "claude-bridge",
   "defaultModel": "claude-sonnet-5",
+  "editorPaddingX": 1,
+  "hideThinkingBlock": true,
   "lastChangelogVersion": "0.84.3",
   "theme": "dark",
   "packages": [
@@ -8,7 +11,18 @@
     "npm:pi-subagents",
     "npm:pi-claude-bridge",
     "/Users/tijs/Sites/sumocoders/claude-plugin",
-    "https://github.com/ayghri/i-have-adhd"
+    "https://github.com/ayghri/i-have-adhd",
+    "npm:@aliou/pi-guardrails",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-execution-time",
+    "npm:pi-rewind",
+    "npm:pi-tool-display"
   ],
+  "markdown": {
+    "mermaid": "streaming"
+  },
+  "quietStartup": true,
+  "showCacheMissNotices": true,
+  "treeFilterMode": "user-only",
   "tuiMode": "regular"
 }
