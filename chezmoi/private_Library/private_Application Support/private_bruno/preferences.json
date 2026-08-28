@@ -14,6 +14,9 @@
 			"timeout": 0,
 			"oauth2": {
 				"useSystemBrowser": false
+			},
+			"clientCertificates": {
+				"certs": []
 			}
 		},
 		"font": {
@@ -63,13 +66,19 @@
 		"layout": {
 			"responsePaneOrientation": "horizontal"
 		},
+		"mockServer": {
+			"mode": "isolated",
+			"instances": []
+		},
 		"beta": {
-			"openapi-sync": false
+			"openapi-sync": false,
+			"mock-server": false
 		},
 		"onboarding": {
 			"hasLaunchedBefore": true,
 			"hasSeenWelcomeModal": true,
-			"lastSeenVersion": "4.0.0"
+			"lastSeenVersion": "4.1.0",
+			"hasSentFirstRequest": true
 		},
 		"general": {
 			"defaultLocation": "/Users/tijs/Documents/bruno",
@@ -129,8 +138,8 @@
 	"themeMode": "system",
 	"themeBg": "#1a1a1a",
 	"window-bounds": {
-		"x": -548,
-		"y": -1138,
+		"x": -20,
+		"y": -1193,
 		"width": 1728,
 		"height": 1007
 	},
