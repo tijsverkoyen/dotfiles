@@ -26,7 +26,7 @@ Before running shell commands, read `~/.claude/RTK.md` for the RTK (Rust Token K
 | common/performance.md          | Model selection, context management   |
 | common/security.md             | Defaults for security                 |
 | common/writing-style.md        | Defaults for writing                  |
-| php/coding-style.md            | Code style for all PHP related filed  |
+| php/coding-style.md            | Code style for all PHP related files  |
 | php/patterns.md                | PHP related patterns                  |
 | php/security.md                | PHP related security guidelines       |
 | php/symfony.md                 | Symfony related guidelines            |
