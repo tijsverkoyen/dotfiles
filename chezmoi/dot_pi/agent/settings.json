@@ -1,0 +1,14 @@
+{
+  "defaultProvider": "claude-bridge",
+  "defaultModel": "claude-sonnet-5",
+  "lastChangelogVersion": "0.84.3",
+  "theme": "dark",
+  "packages": [
+    "npm:@dietrichgebert/ponytail",
+    "npm:pi-subagents",
+    "npm:pi-claude-bridge",
+    "/Users/tijs/Sites/sumocoders/claude-plugin",
+    "https://github.com/ayghri/i-have-adhd"
+  ],
+  "tuiMode": "regular"
+}
