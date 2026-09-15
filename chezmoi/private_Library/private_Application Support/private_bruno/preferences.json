@@ -1,0 +1,150 @@
+{
+	"preferences": {
+		"request": {
+			"sslVerification": false,
+			"customCaCertificate": {
+				"enabled": false,
+				"filePath": null
+			},
+			"keepDefaultCaCertificates": {
+				"enabled": true
+			},
+			"storeCookies": true,
+			"sendCookies": true,
+			"timeout": 0,
+			"oauth2": {
+				"useSystemBrowser": false
+			},
+			"clientCertificates": {
+				"certs": []
+			}
+		},
+		"font": {
+			"codeFont": "default",
+			"codeFontSize": 13
+		},
+		"proxy": {
+			"source": "inherit",
+			"pac": {
+				"source": ""
+			},
+			"config": {
+				"protocol": "http",
+				"hostname": "",
+				"port": null,
+				"auth": {
+					"username": "",
+					"password": ""
+				},
+				"bypassProxy": ""
+			}
+		},
+		"features": {
+			"terminal": true,
+			"apiSpec": true,
+			"fileExplorer": true,
+			"git": true,
+			"brunoJson": false
+		},
+		"secretsProviders": [],
+		"awsConfig": {
+			"enabled": false,
+			"accessKeyId": "",
+			"secretAccessKey": "",
+			"region": "",
+			"sessionToken": ""
+		},
+		"azureConfig": {
+			"enabled": false,
+			"tenantId": "",
+			"clientId": "",
+			"clientSecret": ""
+		},
+		"autoupdate": {
+			"downloadUpdates": true
+		},
+		"layout": {
+			"responsePaneOrientation": "horizontal"
+		},
+		"mockServer": {
+			"mode": "isolated",
+			"instances": []
+		},
+		"beta": {
+			"openapi-sync": false,
+			"mock-server": false
+		},
+		"onboarding": {
+			"hasLaunchedBefore": true,
+			"hasSeenWelcomeModal": true,
+			"lastSeenVersion": "4.1.0",
+			"hasSentFirstRequest": true
+		},
+		"general": {
+			"defaultLocation": "/Users/tijs/Documents/bruno",
+			"defaultWorkspacePath": "/Users/tijs/Library/Application Support/bruno/default-workspace"
+		},
+		"autoSave": {
+			"enabled": false,
+			"interval": 1000
+		},
+		"display": {
+			"zoomPercentage": 100
+		},
+		"cache": {
+			"sslSession": {
+				"enabled": false
+			},
+			"file": {
+				"enabled": false
+			}
+		},
+		"ai": {
+			"enabled": false,
+			"providers": {
+				"openai": {
+					"enabled": false
+				},
+				"anthropic": {
+					"enabled": false
+				}
+			},
+			"models": {},
+			"defaultModel": "",
+			"openaiCompatibleEndpoints": [],
+			"autocomplete": {
+				"enabled": true,
+				"model": "",
+				"triggerMode": "debounced"
+			},
+			"security": {
+				"redactHeaders": true,
+				"redactBody": true,
+				"redactVariables": true,
+				"redactResponse": true,
+				"customRedactedHeaders": [],
+				"customRedactedVariables": []
+			}
+		},
+		"telemetry": {
+			"enabled": true
+		},
+		"license": {
+			"proxy": {
+				"auth": {}
+			}
+		}
+	},
+	"themeMode": "system",
+	"themeBg": "#1a1a1a",
+	"window-bounds": {
+		"x": -20,
+		"y": -1193,
+		"width": 1728,
+		"height": 1007
+	},
+	"workspaces": {
+		"lastOpenedWorkspaces": []
+	},
+	"maximized": false
+}

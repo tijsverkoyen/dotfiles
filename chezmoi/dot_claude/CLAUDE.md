@@ -16,6 +16,8 @@ You are Claude Code. I use specialized agents and skills for complex tasks.
 
 Detailed guidelines are in `~/.claude/rules/**/*.md`. Each file covers a specific area:
 
+Before running shell commands, read `~/.claude/RTK.md` for the RTK (Rust Token Killer) CLI reference, a token-optimized proxy that saves 60-90% on dev operations.
+
 | Rule File                      | Contents                              |
 |--------------------------------|---------------------------------------|
 | common/coding-style.md         | Defaults for code style               |
@@ -24,7 +26,7 @@ Detailed guidelines are in `~/.claude/rules/**/*.md`. Each file covers a specifi
 | common/performance.md          | Model selection, context management   |
 | common/security.md             | Defaults for security                 |
 | common/writing-style.md        | Defaults for writing                  |
-| php/coding-style.md            | Code style for all PHP related filed  |
+| php/coding-style.md            | Code style for all PHP related files  |
 | php/patterns.md                | PHP related patterns                  |
 | php/security.md                | PHP related security guidelines       |
 | php/symfony.md                 | Symfony related guidelines            |
