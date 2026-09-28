@@ -87,7 +87,7 @@ display:
   busy_input_mode: interrupt
   bell_on_complete: false
   show_reasoning: true
-  background_process_notifications: all
+  background_process_notifications: concise
   streaming: true
   skin: default
   interim_assistant_messages: true
@@ -109,8 +109,10 @@ memory:
   nudge_interval: 10
   flush_min_turns: 6
 delegation:
-  max_iterations: 50
+  max_iterations: 250
 skills:
+  external_dirs:
+    - /Users/tijs/Sites/sumocoders/claude-plugin/skills
   creation_nudge_interval: 15
   disabled:
     - architecture-diagram
@@ -130,6 +132,13 @@ timezone: Europe/Brussels
 command_allowlist:
   - script execution via -e/-c flag
   - execute_code
+plugins:
+  enabled:
+    - ac-archive
+  disabled: []
+  entries:
+    ac-archive:
+      allow_tool_override: false
 code_execution:
   timeout: 300
   max_tool_calls: 50
@@ -139,17 +148,15 @@ updates:
   pre_update_backup: false
   backup_keep: 5
   non_interactive_local_changes: stash
-_config_version: 33
+_config_version: 40
 custom_providers:
   - name: Local (localhost:8080)
     base_url: http://localhost:8080/
     model: ornith-ai/Ornith-1.0-35B-GGUF:Q4_K_M
     models:
       bartowski/Qwen2-VL-2B-Instruct-GGUF:Q4_K_M: {}
-      ornith-ai/Ornith-1.0-35B-GGUF:Q4_K_M: {}
       ornith-ai/Ornith-1.5-35B-A3B-GGUF:Q4_K_M: {}
-      unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M: {}
-      unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q5_K_M: {}
+      unsloth/Qwen3.6-35B-A3B-GGUF:Q4_K_XL: {}
     models_discovered: true
 session_reset:
   mode: both
@@ -182,10 +189,41 @@ platform_toolsets:
 platforms:
   slack:
     enabled: true
-plugins:
-  enabled:
-    - ac-archive
-  disabled: []
-  entries:
-    ac-archive:
-      allow_tool_override: false
+
+# ── Security ──────────────────────────────────────────────────────────
+# Secret redaction is ON by default — strings that look like API keys,
+# tokens, and passwords are masked in tool output, logs, and chat
+# responses before the model or user ever sees them. Set redact_secrets
+# to false to disable (e.g. when developing the redactor itself).
+# tirith pre-exec scanning is enabled by default when the tirith binary
+# is available. Configure via security.tirith_* keys or env vars
+# (TIRITH_ENABLED, TIRITH_BIN, TIRITH_TIMEOUT, TIRITH_FAIL_OPEN).
+#
+# security:
+#   redact_secrets: true
+#   tirith_enabled: true
+#   tirith_path: "tirith"
+#   tirith_timeout: 5
+#   tirith_fail_open: true
+
+# ── Fallback Model ────────────────────────────────────────────────────
+# Automatic provider failover when primary is unavailable.
+# Uncomment and configure to enable. Triggers on rate limits (429),
+# overload (529), service errors (503), or connection failures.
+#
+# Supported providers:
+#   openrouter   (OPENROUTER_API_KEY)  — routes to any model
+#   openai-codex (OAuth — hermes auth) — OpenAI Codex
+#   nous         (OAuth — hermes auth) — Nous Portal
+#   zai          (ZAI_API_KEY)         — Z.AI / GLM
+#   kimi-coding  (KIMI_API_KEY)        — Kimi / Moonshot
+#   kimi-coding-cn (KIMI_CN_API_KEY)   — Kimi / Moonshot (China)
+#   minimax      (MINIMAX_API_KEY)     — MiniMax
+#   minimax-cn   (MINIMAX_CN_API_KEY)  — MiniMax (China)
+#   bedrock      (AWS IAM / boto3)     — AWS Bedrock (Converse API)
+#
+# For custom OpenAI-compatible endpoints, add base_url and key_env.
+#
+# fallback_model:
+#   provider: openrouter
+#   model: anthropic/claude-sonnet-4
