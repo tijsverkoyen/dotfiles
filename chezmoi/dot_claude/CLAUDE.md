@@ -23,9 +23,7 @@ Before running shell commands, read `~/.claude/RTK.md` for the RTK (Rust Token K
 | common/coding-style.md         | Defaults for code style               |
 | common/development-workflow.md | Default way of working                |
 | common/git-workflow.md         | Commit format, PR workflow            |
-| common/performance.md          | Model selection, context management   |
 | common/security.md             | Defaults for security                 |
-| common/writing-style.md        | Defaults for writing                  |
 | php/coding-style.md            | Code style for all PHP related files  |
 | php/patterns.md                | PHP related patterns                  |
 | php/security.md                | PHP related security guidelines       |
@@ -62,14 +60,11 @@ Before running shell commands, read `~/.claude/RTK.md` for the RTK (Rust Token K
 - Always use English for code, comments, and documentation
 - No em dashes (use commas or short sentences), active voice only, no passive constructions, no therapy speak, no
   comforting
-- Use PHP Attributes whenever possible
-- Use invokable controllers, commands, ... whenever possible
 - Use Symfony Messenger whenever possible
 - Use #[Autowire] when possible
 
 ### Git
 
-- Conventional commits: `feat:`, `fix:`, `refactor:`, `docs:`, `chore:`
 - Always test locally before committing
 - Small, focused commits
 
