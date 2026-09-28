@@ -10,6 +10,9 @@ fileType         = text.html.markdown
 [ *.csv ]
 fileType         = text.tabular.csv
 
+[ *.txt ]
+fileType         = text.html.markdown
+
 [ *.jsonc ]
 fileType         = source.json
 
