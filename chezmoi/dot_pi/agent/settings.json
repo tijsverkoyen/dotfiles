@@ -4,11 +4,10 @@
   "defaultModel": "claude-sonnet-5",
   "editorPaddingX": 1,
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.84.3",
-  "theme": "dark",
+  "lastChangelogVersion": "0.87.1",
+  "theme": "catppuccin-mocha",
   "packages": [
     "npm:@dietrichgebert/ponytail",
-    "npm:pi-subagents",
     "npm:pi-claude-bridge",
     "/Users/tijs/Sites/sumocoders/claude-plugin",
     "https://github.com/ayghri/i-have-adhd",
@@ -16,13 +15,60 @@
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-execution-time",
     "npm:pi-rewind",
-    "npm:pi-tool-display"
+    "npm:pi-tool-display",
+    "npm:@plannotator/pi-extension",
+    "npm:@gotgenes/pi-subagents"
   ],
   "markdown": {
     "mermaid": "streaming"
   },
   "quietStartup": true,
   "showCacheMissNotices": true,
+  "subagents": {
+    "agentOverrides": {
+      "scout": {
+        "tools": [
+          "read",
+          "grep",
+          "find",
+          "ls"
+        ],
+        "timeoutMs": 900000
+      },
+      "researcher": {
+        "tools": [
+          "read",
+          "grep",
+          "find",
+          "ls"
+        ],
+        "timeoutMs": 900000
+      },
+      "reviewer": {
+        "tools": [
+          "read",
+          "grep",
+          "find",
+          "ls",
+          "bash"
+        ],
+        "completionGuard": false,
+        "timeoutMs": 900000
+      },
+      "oracle": {
+        "tools": [
+          "read",
+          "grep",
+          "find",
+          "ls"
+        ],
+        "timeoutMs": 900000
+      },
+      "delegate": {
+        "timeoutMs": 900000
+      }
+    }
+  },
   "treeFilterMode": "user-only",
   "tuiMode": "regular"
 }

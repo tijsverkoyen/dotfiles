@@ -16,6 +16,35 @@
       {
         "kind": "file",
         "path": "/dev/null"
+      },
+      {
+        "kind": "directory",
+        "path": "/tmp"
+      }
+    ]
+  },
+  "policies": {
+    "rules": [
+      {
+        "id": "secret-files",
+        "description": "Files containing secrets (migrated from envFiles)",
+        "protection": "noAccess",
+        "patterns": [
+          {
+            "pattern": ".env"
+          },
+          {
+            "pattern": ".env.*"
+          }
+        ],
+        "allowedPatterns": [
+          {
+            "pattern": "~/Sites/sumocoders/claude-plugin/.env.local"
+          },
+          {
+            "pattern": ".env"
+          }
+        ]
       }
     ]
   }
