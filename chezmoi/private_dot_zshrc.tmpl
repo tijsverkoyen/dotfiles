@@ -16,6 +16,10 @@ plugins=(
   npm
 )
 
+# Auto update
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 2
+
 # Source other files
 source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/zsh/.zsh_aliases
@@ -53,6 +57,9 @@ export SUMO_GITLAB_ACCESS_TOKEN="{{ onepasswordRead "op://Private/rdnhoairyhqgfw
 
 # OpenRouter.ai
 export OPENROUTER_API_KEY="{{ onepasswordRead "op://Private/7x7qhdcorzduy5t2ihqjxiehhm/OPENROUTER_API_KEY" }}"
+
+# Claude
+export CLAUDE_CODE_OAUTH_TOKEN="{{ onepasswordRead ""op://Private/ufboqkz3jdyeyr6rlyzvpfgbvy/CLAUDE_CODE_OAUTH_TOKEN"}}"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
