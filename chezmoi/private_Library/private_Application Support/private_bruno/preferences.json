@@ -72,12 +72,12 @@
 		},
 		"beta": {
 			"openapi-sync": false,
-			"mock-server": false
+			"mock-server": true
 		},
 		"onboarding": {
 			"hasLaunchedBefore": true,
 			"hasSeenWelcomeModal": true,
-			"lastSeenVersion": "4.1.0",
+			"lastSeenVersion": "4.2.0",
 			"hasSentFirstRequest": true
 		},
 		"general": {
@@ -133,13 +133,16 @@
 			"proxy": {
 				"auth": {}
 			}
+		},
+		"_migrations": {
+			"mockServerBetaOnByDefault": true
 		}
 	},
 	"themeMode": "system",
 	"themeBg": "#1a1a1a",
 	"window-bounds": {
-		"x": -20,
-		"y": -1193,
+		"x": 17,
+		"y": 33,
 		"width": 1728,
 		"height": 1007
 	},
