@@ -7,6 +7,9 @@
       "Bash(rtk grep *)"
     ]
   },
+  "skillOverrides": {
+    "graphify": "off"
+  },
   "hooks": {
     "SessionStart": [
       {
@@ -31,12 +34,13 @@
     ]
   },
   "enabledPlugins": {
-    "symfony-ux@symfony-ux": true,
+    "symfony-ux@symfony-ux": false,
     "sumo@sumocoders": true,
     "context-mode@context-mode": true,
-    "claude-code-setup@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": false,
     "claude-mem@thedotmack": true,
-    "ponytail@ponytail": true
+    "ponytail@ponytail": true,
+    "code-modernization@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "thedotmack": {
@@ -74,6 +78,12 @@
       "source": {
         "source": "github",
         "repo": "ayghri/i-have-adhd"
+      }
+    },
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
       }
     }
   },
